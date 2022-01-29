@@ -1,103 +1,201 @@
+// .tui-pagination {
+
+//   justify-content: center;
+//   align-items: flex-end;
+//   padding-bottom: 40px;
+// // }
+// @media screen and (min-width: 768px) {
+//   .tui-pagination {
+//     padding-bottom: 60px;
+//   }
+// }
+//     // background: #ff6b08;
+//     // border-color: #ff6b08;
+//     // border-radius: 5px;
+    
+
+// .tui-page-btn {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 5px;
+//     color:  #000000;
+//     font-weight: 500;
+//     line-height: 16px;
+//   }
+//   .tui-page-btn:first-child,
+//   .tui-page-btn:last-child {
+//     display: none;
+//   }
+  
+//   .tui-prev {
+//     cursor: pointer;
+//     position: relative;
+//     display: block;
+//     background-color: #f7f7f7;
+//   }
+//   .tui-ico-prev {
+//     position: relative;
+//     font-size: 0;
+//     top: 20px;
+//     width: 10px;
+//     height: 1.33px;
+//     background-color: #ff6b08;
+//     left: 15px;
+//     display: block;
+//   }
+//   .tui-ico-prev::before {
+//     content: '';
+//     position: absolute;
+//     width: 5px;
+//     height: 1.33px;
+//     top: 2px;
+//     right: 5px;
+//     background-color: #ff6b08;
+//     transform: rotate(45deg);
+//   }
+//   .tui-ico-prev::after {
+//     content: '';
+//     position: absolute;
+//     width: 5px;
+//     height: 1.33px;
+//     top: -2px;
+//     right: 5px;
+//     background-color: #ff6b08;
+//     transform: rotate(-45deg);
+//   }
+//   .tui-is-selected {
+//      background: #ff6b08;
+//     color: #ffffff;
+//   }
+//   .tui-next {
+//     cursor: pointer;
+//     position: relative;
+//     display: block;
+//     background-color: #f7f7f7;
+//   }
+//   .tui-ico-next {
+//     position: relative;
+//     font-size: 0;
+//     top: 20px;
+//     width: 10px;
+//     height: 1.33px;
+//     background-color: #ff6b08;
+//     left: 15px;
+//     display: block;
+//   }
+//   .tui-ico-next::before {
+//     content: '';
+//     position: absolute;
+//     width: 5px;
+//     height: 1.33px;
+//     top: -2px;
+//     right: 0;
+//     background-color: #ff6b08;
+//     transform: rotate(45deg);
+//   }
+//   .tui-ico-next::after {
+//     content: '';
+//     position: absolute;
+//     width: 5px;
+//     height: 1.33px;
+//     top: 2px;
+//     right: 0;
+//     background-color: #ff6b08;
+//     transform: rotate(-45deg);
+//   }
+
 .tui-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    color: rgb(82, 66, 66);
-    background: #ff6b08;
-    border-color: #ff6b08;
+    height: 28px;
+    margin: 14px 0 12px;
+    line-height: normal;
+    text-align: center;
+    font-size: 0;
+}
+
+.tui-pagination .tui-page-btn {
+    display: inline-block;
+    position: relative;
+    width: 28px;
+    padding: 8px 0 6px;
+    margin-left: 0;
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-width: 0;
+}
+
+
+
+.tui-pagination .tui-is-selected, .tui-pagination strong {
+    color: #fff;
+    background: #FF6B08;
+    border-color: #FF6B08;
     border-radius: 5px;
     cursor: default;
 }
 
-.tui-page-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    color:  #000000;
-    font-weight: 500;
-    line-height: 16px;
-  }
-  .tui-page-btn:first-child,
-  .tui-page-btn:last-child {
-    display: none;
-  }
+.tui-page-btn:first-child,
+.tui-page-btn:last-child {
+  display: none;
+}
+.tui-pagination .tui-first, .tui-pagination .tui-prev, .tui-pagination .tui-next, .tui-pagination .tui-last, .tui-pagination .tui-prev-is-ellip, .tui-pagination .tui-next-is-ellip {
+    overflow: hidden;
+    height: 26px;
+    padding: 0;
+    font-size: 0;
+    line-height: 26px;
+    white-space: nowrap;
+    font-weight: normal;
   
-  .tui-prev {
-    cursor: pointer;
-    position: relative;
-    display: block;
-    background-color: #f7f7f7;
-  }
-  .tui-ico-prev {
-    position: relative;
-    font-size: 0;
-    top: 20px;
+}
+.tui-pagination .tui-prev {
+    margin-right: 10px;
+    background: #F7F7F7;
+border-radius: 5px;
+}
+
+.tui-pagination .tui-next {
+    margin-left: 10px;
+    background: #F7F7F7;
+border-radius: 5px;
+transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.tui-pagination .tui-ico-first {
+    width: 11px;
+    height: 10px;
+    background-position: 0px 0px
+}
+
+ .tui-ico-prev {
+    width: 6px;
+    height: 10px;
+    background-position: -26px 0px
+}
+
+ .tui-ico-next {
+    width: 6px;
+    height: 10px;
+    background-position: -13px -24px
+}
+
+ .tui-ico-last {
+    width: 11px;
+    height: 10px;
+    background-position: 0px -12px
+}
+
+ .tui-ico-ellip {
     width: 10px;
-    height: 1.33px;
-    background-color: #ff6b08;
-    left: 15px;
-    display: block;
-  }
-  .tui-ico-prev::before {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 1.33px;
-    top: 2px;
-    right: 5px;
-    background-color: #ff6b08;
-    transform: rotate(45deg);
-  }
-  .tui-ico-prev::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 1.33px;
-    top: -2px;
-    right: 5px;
-    background-color: #ff6b08;
-    transform: rotate(-45deg);
-  }
-  .tui-is-selected {
-    background: #ff6b08;
-    color: #ffffff;
-  }
-  .tui-next {
-    cursor: pointer;
-    position: relative;
-    display: block;
-    background-color: #f7f7f7;
-  }
-  .tui-ico-next {
-    position: relative;
-    font-size: 0;
-    top: 20px;
-    width: 10px;
-    height: 1.33px;
-    background-color: #ff6b08;
-    left: 15px;
-    display: block;
-  }
-  .tui-ico-next::before {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 1.33px;
-    top: -2px;
-    right: 0;
-    background-color: #ff6b08;
-    transform: rotate(45deg);
-  }
-  .tui-ico-next::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 1.33px;
-    top: 2px;
-    right: 0;
-    background-color: #ff6b08;
-    transform: rotate(-45deg);
-  }
+    height: 2px;
+    margin-top: 16px;
+    vertical-align: top;
+    background-position: 0px -24px
+}

@@ -1,11 +1,12 @@
-// import {trendingMovies, getGenres } from './js/api';
-import './sass/main.scss';
+// import {name } from './js/api';
+
 import {  renderPaginationTrendigMovie } from './js/pagination';
  import './js/pagination';
+ import './sass/main.scss';
 
+ renderPaginationTrendigMovie(1000);
 
-
-// trendingMovies().then((films) => {
+//  names().then((films) => {
 //     console.log(films);
 //     renderPaginationTrendigMovie(films.total);
 // });

@@ -1,5 +1,5 @@
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
+  import 'tui-pagination/dist/tui-pagination.css';
 
 // instance.getCurrentPage();
 
@@ -9,8 +9,8 @@ import 'tui-pagination/dist/tui-pagination.css';
  
     const options = { // below default value of options
         totalItems,
-        itemsPerPage: 10,
-        visiblePages: 10,
+        itemsPerPage: 20,
+        visiblePages: 5,
         page: 1,
         centerAlign: false,
         firstItemClassName: 'tui-first-child',
