@@ -1,7 +1,7 @@
 import GetTrendingMoviesApi from './filmoteka-api.js';
 import filmsTpl from '../templates/film-prewiev-tpl.hbs';
 
-const moviesGallery = document.querySelector('.home-container');
+export const moviesGallery = document.querySelector('.home-container');
 const GetTrendingMovies = new GetTrendingMoviesApi();
 
 GetTrendingMovies.fetchMovies()
