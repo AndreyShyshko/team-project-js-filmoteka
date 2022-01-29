@@ -9,3 +9,95 @@
     cursor: default;
 }
 
+.tui-page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color:  #000000;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .tui-page-btn:first-child,
+  .tui-page-btn:last-child {
+    display: none;
+  }
+  
+  .tui-prev {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    background-color: #f7f7f7;
+  }
+  .tui-ico-prev {
+    position: relative;
+    font-size: 0;
+    top: 20px;
+    width: 10px;
+    height: 1.33px;
+    background-color: #ff6b08;
+    left: 15px;
+    display: block;
+  }
+  .tui-ico-prev::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 1.33px;
+    top: 2px;
+    right: 5px;
+    background-color: #ff6b08;
+    transform: rotate(45deg);
+  }
+  .tui-ico-prev::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 1.33px;
+    top: -2px;
+    right: 5px;
+    background-color: #ff6b08;
+    transform: rotate(-45deg);
+  }
+  .tui-is-selected {
+    background: #ff6b08;
+    color: #ffffff;
+  }
+  .tui-next {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    background-color: #f7f7f7;
+  }
+  .tui-ico-next {
+    position: relative;
+    font-size: 0;
+    top: 20px;
+    width: 10px;
+    height: 1.33px;
+    background-color: #ff6b08;
+    left: 15px;
+    display: block;
+  }
+  .tui-ico-next::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 1.33px;
+    top: -2px;
+    right: 0;
+    background-color: #ff6b08;
+    transform: rotate(45deg);
+  }
+  .tui-ico-next::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 1.33px;
+    top: 2px;
+    right: 0;
+    background-color: #ff6b08;
+    transform: rotate(-45deg);
+  }

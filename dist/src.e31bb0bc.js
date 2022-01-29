@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/tui-pagination/dist/tui-pagination.js":[function(require,module,exports) {
+},{"./..\\images\\demo.jpg":[["demo.3a1bb503.jpg","images/demo.jpg"],"images/demo.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/tui-pagination/dist/tui-pagination.js":[function(require,module,exports) {
 var define;
 /*!
  * TOAST UI Pagination
@@ -3416,15 +3416,13 @@ function renderPaginationTrendigMovie(totalItems) {
       moreButton: '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' + '<span class="tui-ico-ellip">...</span>' + '</a>'
     }
   };
-} //  const instance = new Pagination(container, options);
-// instance.getCurrentPage();
-// instance.on('beforeMove', (event) => {
-//     const currentPage = event.page;
-//     if (currentPage === 10) {
-//         return false;
-//         // return true;
-//     }
-// });
+  const instance = new _tuiPagination.default(container, options); // instance.getCurrentPage();
+
+  instance.on('afterMove', event => {
+    const currentPage = event.page;
+    console.log(currentPage);
+  });
+}
 },{"tui-pagination":"../node_modules/tui-pagination/dist/tui-pagination.js","tui-pagination/dist/tui-pagination.css":"../node_modules/tui-pagination/dist/tui-pagination.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -3459,7 +3457,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63401" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53323" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -30,17 +30,15 @@ import 'tui-pagination/dist/tui-pagination.css';
                 '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' +
                     '<span class="tui-ico-ellip">...</span>' +
                 '</a>'
-      }}  }
+      }}  
    
  
 
-//  const instance = new Pagination(container, options);
+ const instance = new Pagination(container, options);
 // instance.getCurrentPage();
-// instance.on('beforeMove', (event) => {
-//     const currentPage = event.page;
+instance.on('afterMove', (event) => {
+    const currentPage = event.page;
+    console.log(currentPage);
+});
 
-//     if (currentPage === 10) {
-//         return false;
-//         // return true;
-//     }
-// });
+}
