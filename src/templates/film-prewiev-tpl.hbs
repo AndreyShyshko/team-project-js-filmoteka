@@ -1,11 +1,11 @@
 {{#each this}}
 <div class="film-prewiev">
-<div class="film-poster">
-    {{poster_path}}
-</div>
-<div>
-    <p class="film-prewiev-title">{{original_title}}</p>
-    <p class="film-prewiev-genre">{{genre_ids}} | {{release_date}}</p>
-</div>
+    <div class="film-poster">
+       <img src={{poster_path}} alt="{{original_title}} poster"> 
+    </div>
+    <div class="film-descr">
+        <p class="film-prewiev-title">{{original_title}}</p>
+        <p class="film-prewiev-genre">{{genre_ids}} | {{release_date}}</p>
+    </div>
 </div>
 {{/each}}
