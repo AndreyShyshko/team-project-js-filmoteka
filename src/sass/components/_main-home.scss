@@ -1,5 +1,6 @@
 .home-container,
-.library-container {
+.watched,
+.queue {
   background-color: inherit;
   display: grid;
   max-width: calc(100vw - 20px * 2);
@@ -66,6 +67,6 @@
   transform: scale(1.1);
 }
 
-.home-isHide {
+.isHide {
   display: none;
 }
