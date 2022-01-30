@@ -1,5 +1,6 @@
 .home-container,
 .library-container {
+  background-color: inherit;
   display: grid;
   max-width: calc(100vw - 20px * 2);
   grid-template-columns: 280px;
@@ -27,6 +28,7 @@
 .film-poster {
   width: 100%;
   height: 402px;
+  border-radius: 5px;
 
   @media screen and (min-width: 768px) {
     height: 398px;
@@ -34,20 +36,32 @@
 }
 
 .film-descr {
-  height: 31px;
+  height: 9%;
+  background-color: inherit;
+  border-radius: 5px;
   margin-top: 10px;
   font-weight: 500;
-  line-height: 14px;
+  line-height: 16px;
 }
 
 .film-prewiev-title {
   text-transform: uppercase;
   margin-bottom: 2px;
-  color: $text-color;
 }
 
 .film-prewiev-genre {
+  display: inline-block;
   color: $accent-color;
+}
+
+.prewiev-card {
+  background-image: url(../images/placeholder.gif);
+  background-color: inherit;
+  transition: 300ms;
+}
+
+.prewiev-card:hover {
+  transform: scale(1.1);
 }
 
 .home-isHide {
