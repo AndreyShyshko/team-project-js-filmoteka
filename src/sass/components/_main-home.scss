@@ -10,6 +10,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  margin-top: 20px;
 
   @media screen and (min-width: 768px) {
     max-width: calc(100vw - 75px * 2);
@@ -17,6 +18,7 @@
     grid-auto-rows: 440px;
     grid-gap: 30px;
     margin-bottom: 50px;
+    margin-top: 60px;
   }
 
   @media screen and (min-width: 1024px) {
@@ -36,9 +38,7 @@
 }
 
 .film-descr {
-  height: 9%;
   background-color: inherit;
-  border-radius: 5px;
   margin-top: 10px;
   font-weight: 500;
   line-height: 16px;
@@ -55,6 +55,8 @@
 }
 
 .prewiev-card {
+  height: 101%;
+  border-radius: 5px;
   background-image: url(../images/placeholder.gif);
   background-color: inherit;
   transition: 300ms;
