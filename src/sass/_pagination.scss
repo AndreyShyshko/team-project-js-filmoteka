@@ -106,6 +106,12 @@
 //     background-color: #ff6b08;
 //     transform: rotate(-45deg);
 //   }
+.tui-pagination * {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 .tui-pagination {
     height: 28px;
@@ -155,7 +161,7 @@
     width: 40px;
     height: 40px;
   
-    padding: 6px;
+    padding: 8px;
     font-size: 0;
     line-height: 26px;
     white-space: nowrap;
@@ -166,6 +172,13 @@
     margin-right: 10px;
     background: #F7F7F7;
 border-radius: 5px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+ background-image: url(../images/arrow-left.png);
+ background-position: center;
+ background-repeat: no-repeat;
+ vertical-align: middle;
+ stroke: #000;
+
 }
 
 .tui-pagination .tui-next {
@@ -173,6 +186,9 @@ border-radius: 5px;
     background: #F7F7F7;
 border-radius: 5px;
 transform: matrix(1, 0, 0, 1, 0, 0);
+ background-image: url(../images/arrow-left.png);
+ background-position: center;
+ background-repeat: no-repeat;
 
 }
 
