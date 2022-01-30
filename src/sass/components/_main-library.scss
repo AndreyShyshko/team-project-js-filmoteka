@@ -1,0 +1,14 @@
+.film-rating {
+  display: inline-block;
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: $accent-color;
+  color: $main-bg-color;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.isHide {
+  display: none;
+}

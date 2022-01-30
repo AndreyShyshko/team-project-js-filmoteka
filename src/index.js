@@ -1,14 +1,8 @@
-// import {name } from './js/api';
 
+import './sass/main.scss';
+
+import './js/filmoteka-api';
+import './js/change-genres-id';
+import './js/main-trending-markup';
+import './js/header-links';
 import {  renderPaginationTrendigMovie } from './js/pagination';
- import './js/pagination';
- import './sass/main.scss';
-
- renderPaginationTrendigMovie(1000);
-
-//  names().then((films) => {
-//     console.log(films);
-//     renderPaginationTrendigMovie(films.total);
-// });
-
-// getGenres().then((genres) => console.log(genres));
