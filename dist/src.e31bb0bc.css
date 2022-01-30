@@ -40,9 +40,10 @@
     border-width: 1px 0;
 }
 
-/* .tui-pagination .tui-page-btn:hover {
+.tui-pagination .tui-page-btn:hover {
     background-color: #f4f4f4;
-} */
+    border-radius: 5px;
+}
 
 .tui-pagination .tui-is-selected, .tui-pagination strong {
     color: #fff;
