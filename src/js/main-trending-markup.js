@@ -14,7 +14,7 @@ GetTrendingMovies.fetchMovies()
     console.log(error);
   });
 
-function createMoviesGallery(info) {
-  const markup = filmsTpl(info);
+function createMoviesGallery(moviesArray) {
+  const markup = filmsTpl(moviesArray);
   moviesGallery.insertAdjacentHTML('beforeend', markup);
 }
