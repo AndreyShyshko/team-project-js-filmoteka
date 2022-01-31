@@ -96,12 +96,15 @@ transform: matrix(1, 0, 0, 1, 0, 0);
  background-repeat: no-repeat;
 
 }
-.tui-pagination .tui-next:hover,
+
 .tui-pagination .tui-prev:hover {
         background-color:#F7F7F7;
         color: #fff;
     }
-
+    .tui-pagination .tui-next:hover {
+        background-color:#F7F7F7;
+        color: #fff;
+    }
 
 .tui-pagination .tui-ico-first {
     width: 11px;
@@ -118,7 +121,7 @@ transform: matrix(1, 0, 0, 1, 0, 0);
 .tui-pagination .tui-ico-next {
     width: 0px;
     height: 10px;
-    background-position: -13px -24px
+    background-position: -13px -24px;
 }
 
  .tui-ico-last {

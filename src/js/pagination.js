@@ -1,5 +1,6 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
+
 // import currentPage from './filmServiceApi.js';
 // instance.getCurrentPage();
 // const currentPage = new DataFetch();
