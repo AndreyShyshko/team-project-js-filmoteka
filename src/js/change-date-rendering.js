@@ -1,5 +1,5 @@
 export function changeDateRendering(moviesArray) {
-  moviesArray.forEach(({ release_date }) => {
-    release_date = release_date.split('-')[0];
+  moviesArray.forEach(movie => {
+    movie.release_date = movie.release_date.split('-').splice(0, 1);
   });
 }
