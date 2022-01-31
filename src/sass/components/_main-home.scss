@@ -50,9 +50,13 @@
   margin-bottom: 2px;
 }
 
-.film-prewiev-genre {
-  display: inline-block;
+.film-prewiev-genre,
+.film-prewiev-date {
+  display: inline-flex;
   color: $accent-color;
+}
+.film-prewiev-genre li:not(:last-child)::after {
+  content: ',\A0';
 }
 
 .prewiev-card {
