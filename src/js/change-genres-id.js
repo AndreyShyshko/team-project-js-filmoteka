@@ -27,9 +27,9 @@ export function changeGenreIdToName(moviesArray) {
 }
 
 function cropGenresList(moviesArray) {
-  moviesArray.forEach(movie => {
-    if (movie.genre_ids.length > 2) {
-      movie.genre_ids.splice(2, movie.genre_ids.length - 2, 'Other');
+  moviesArray.forEach(({ genre_ids }) => {
+    if (genre_ids.length > 2) {
+      genre_ids.splice(2, genre_ids.length - 2, 'Other');
     }
   });
 }
