@@ -8,4 +8,7 @@ import './js/change-genres-id';
 import './js/main-trending-markup';
 import './js/header-links';
 
-renderPaginationTrendigMovie(1000);
+
+
+
+    renderPaginationTrendigMovie(10000) ;
