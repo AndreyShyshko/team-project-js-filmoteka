@@ -1,6 +1,12 @@
+import './js/pagination';
+import { renderPaginationTrendigMovie } from './js/pagination';
+
 import './sass/main.scss';
 
-import './js/filmoteka-api.js';
-import './js/main-trending-markup.js';
+import './js/filmoteka-api';
+import './js/change-genres-id';
+import './js/main-trending-markup';
 import './js/headerChangePage';
-import './js/header-links.js';
+import './js/header-links';
+
+renderPaginationTrendigMovie(1000);
