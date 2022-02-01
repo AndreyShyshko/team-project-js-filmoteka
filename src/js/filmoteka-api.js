@@ -2,25 +2,23 @@ import axios from 'axios';
 const API_KEY = '219747bddc830c6768a55001e81d80ed';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
-export default class GetTrendingMoviesApi {
+export default class GetMoviesApi {
   constructor() {
     this.searchQuery = '';
     this.page = 1;
   }
 
-  async fetchMovies() {
+  async fetchTrendingMovies() {
     const options = {
       params: {
         api_key: API_KEY,
-        q: this.searchQuery,
         page: this.page,
       },
     };
 
     const response = await axios.get('trending/movie/day', options);
-    const trendingMoviesList = await response.data.results;
     //     this.incrementPage();
-    return trendingMoviesList;
+    return await response.data.results;
   }
 
   async fetchGenres() {
@@ -31,9 +29,23 @@ export default class GetTrendingMoviesApi {
     };
 
     const response = await axios.get('genre/movie/list?', options);
-    const genresList = await response.data.genres;
-    return genresList;
+    return await response.data.genres;
   }
+
+  async fetchMoviesByQuery() {
+    const options = {
+      params: {
+        api_key: API_KEY,
+        query: this.searchQuery,
+        page: this.page,
+      },
+    };
+
+    const response = await axios.get('search/movie?', options);
+    // this.incrementPage();
+    return await response.data.results;
+  }
+
   //   incrementPage() {
   //     this.page += 1;
   //   }
@@ -50,6 +62,3 @@ export default class GetTrendingMoviesApi {
     this.searchQuery = newQuery;
   }
 }
-
-
-
