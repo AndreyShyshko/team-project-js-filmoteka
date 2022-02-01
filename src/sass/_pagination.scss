@@ -111,10 +111,12 @@ transform: matrix(1, 0, 0, 1, 0, 0);
 .tui-pagination .tui-prev:hover {
         background-color:#F7F7F7;
         color: #fff;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .tui-pagination .tui-next:hover {
         background-color:#F7F7F7;
         color: #fff;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .tui-pagination .tui-ico-first {
