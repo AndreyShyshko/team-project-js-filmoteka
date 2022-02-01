@@ -1,6 +1,6 @@
-import GetTrendingMoviesApi from './filmoteka-api.js';
+import GetMoviesApi from './filmoteka-api.js';
 
-const GetGenres = new GetTrendingMoviesApi();
+const GetGenres = new GetMoviesApi();
 let genresDatabase = [];
 
 GetGenres.fetchGenres()

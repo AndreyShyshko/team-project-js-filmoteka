@@ -1,4 +1,3 @@
-
 const homeBtn = document.querySelector('#headerHomeBtn');
 const libraryBtn = document.querySelector('#headerLibraryBtn');
 
