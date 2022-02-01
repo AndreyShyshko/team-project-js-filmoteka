@@ -59,6 +59,10 @@
   content: ',\A0';
 }
 
+.film-prewiev-genre li:last-child::after {
+  content: '\A0|\A0';
+}
+
 .prewiev-card {
   height: 101%;
   border-radius: 5px;
