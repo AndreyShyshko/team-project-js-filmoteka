@@ -41,12 +41,23 @@
 .tui-pagination .tui-is-selected:hover {
     background-color: #FF6B08;
 }
-.tui-pagination .tui-page-btn:hover {
-    background-color: #FF6B08;
-    color:  #fff;
-    border-radius: 5px;
-    // background: #F7F7F7
+ .tui-page-btn:hover {
+    background-color: #f4f4f4;
+border-radius: 5px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.tui-pagination .tui-is-disabled:hover {
+    background: #fff;
+    cursor: default;
+}
+// .tui-pagination .tui-page-btn:hover {
+//     background-color: #f4f4f4;
+//     color:  #fff;
+//     border-radius: 5px;
+//     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//     // transition: all .3s cubic-bezier(.4,0,.2,1);
+//     // background: #F7F7F7
+// }
 
 
 .tui-pagination .tui-is-selected, .tui-pagination strong {
