@@ -18,10 +18,17 @@
       </nav>
       <div class="header__home-content">
         <form class="header__form">
-          <input type="text" placeholder="Поиск фильмов" class="header__form-input" />
-          <svg class="header__form-img">
-            <use href="./images/svg/search 2.svg#search 2"></use>
-          </svg>
+          <input 
+          type="text" 
+          name="searchInput" 
+          placeholder="Поиск фильмов" 
+          class="header__form-input"
+          />
+          <button class="header__form-submit" type="submit">
+            <svg class="header__form-img">
+              <use href="./images/svg/search 2.svg#search 2"></use>
+            </svg>
+          </button>
         </form>
         <div class="header__error js-header__error">
           <p class="header__error-text is-hidden">
