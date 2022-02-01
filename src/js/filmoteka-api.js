@@ -50,3 +50,6 @@ export default class GetTrendingMoviesApi {
     this.searchQuery = newQuery;
   }
 }
+
+
+
