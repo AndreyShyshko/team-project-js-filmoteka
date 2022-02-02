@@ -10,12 +10,15 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 28px;
-  padding-bottom: 40px;
-  padding-top: 30px;
-
+  height: 40px;
+  padding: 0;
+  margin: 0 auto 40px auto;
   line-height: normal;
   font-size: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
 }
 
 .tui-pagination .tui-page-btn {
@@ -146,4 +149,9 @@ body.dark-theme {
   & .tui-page-btn {
     color: #ffffff;
   }
+}
+
+.tui-pagination .tui-prev,
+.tui-pagination .tui-next {
+  background-color: #f7f7f7 !important;
 }
