@@ -1,6 +1,7 @@
 import GetMoviesApi from './filmoteka-api.js';
 import { renderMarkup, moviesGallery } from './main-trending-markup';
 import { showError, hideError } from './throw-error';
+import { showRating } from './show-rating';
 
 const searchForm = document.querySelector('.header__form');
 const GetMoviesByQuery = new GetMoviesApi();
@@ -13,7 +14,8 @@ function searchMoviesByQuery(e) {
 
   GetMoviesByQuery.fetchMoviesByQuery()
     .then(responseData => {
-      if (responseData.length === 0) {
+      if (GetMoviesByQuery.query.trim() == '' || responseData.length == 0) {
+        searchForm.reset();
         throw new Error();
       }
       return responseData;
@@ -22,6 +24,11 @@ function searchMoviesByQuery(e) {
       hideError();
       moviesGallery.innerHTML = '';
       renderMarkup(responseData);
+      const ratingsArray = document.querySelectorAll('.film-rating');
+      return ratingsArray;
+    })
+    .then(ratingsArray => {
+      showRating(ratingsArray);
     })
     .catch(showError);
 }
