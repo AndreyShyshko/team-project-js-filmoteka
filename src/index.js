@@ -11,5 +11,6 @@ import './js/search-movie-by-query';
 import './js/throw-error';
 import './js/headerChangePage';
 import './js/header-links';
+import './js/modalWindow'
 
 renderPaginationTrendigMovie(10000);
