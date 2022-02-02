@@ -174,18 +174,22 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-color: transparent;
-
+  transition: 250ms;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
   color: $main-bg-color;
   &:hover {
-    background-color: $accent-color;
+    // background-color: $accent-color;
     border-color: $accent-color;
     box-shadow: -3px 4px 21px -4px $accent-color;
   }
 }
-
+.isActive {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  box-shadow: -3px 4px 21px -4px $accent-color;
+}
 //====================================//
 
 @media screen and (min-width: 768px) {
