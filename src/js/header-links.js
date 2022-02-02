@@ -15,7 +15,10 @@ watchedBtn.addEventListener('click', goWatched);
 function goHome() {
   library.classList.add('isHide');
   queue.classList.add('isHide');
+  watched.classList.add('isHide');
   moviesGallery.classList.remove('isHide');
+  watchedBtn.classList.remove('isActive');
+  queueBtn.classList.remove('isActive');
 }
 
 function goLibrary() {
