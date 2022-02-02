@@ -35,17 +35,24 @@
     border: 1px solid #ddd;
     border-width: 0;
 }
+.tui-pagination .tui-page-btn:hover {
+    /* background-color: #f4f4f4; */
+    background-color: rgba(255, 107, 1, 0.6);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .tui-pagination .tui-first-child.tui-is-selected {
     border-left: 1px solid #FF6B08;
 }
 .tui-pagination .tui-is-selected:hover {
     background-color: #FF6B08;
 }
- .tui-page-btn:hover {
-    background-color: #f4f4f4;
-border-radius: 5px;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+//  .tui-page-btn:hover {
+//     background-color: #f4f4f4;
+// border-radius: 5px;
+// transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
 .tui-pagination .tui-is-disabled:hover {
     background: #fff;
     cursor: default;
@@ -86,7 +93,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic
 }
 .tui-pagination .tui-prev {
     transform: matrix(-1, 0, 0, 1, 0, 0);
-    // background: #F7F7F7;
+     background: #F7F7F7;
     vertical-align: middle;
     margin-right: 10px;
      border-radius: 5px;
@@ -94,7 +101,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic
      background-image: url(../images/arrow-left.png);
      background-position: center;
      background-repeat: no-repeat;
-
+    //  background-color:rgba(247, 247, 247, 0.0);
 }
 
 .tui-pagination .tui-next {
@@ -105,16 +112,24 @@ transform: matrix(1, 0, 0, 1, 0, 0);
  background-image: url(../images/arrow-left.png);
  background-position: center;
  background-repeat: no-repeat;
-
+ background-color: #F7F7F7;
+//  background-color:rgba(247, 247, 247, 0.0);
 }
 
 .tui-pagination .tui-prev:hover {
-        background-color:#F7F7F7;
-        color: #fff;
+    background-color: #F7F7F7;
+    background-image: url(../images/arrow-left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+        // background-color:rgba(247, 247, 247, 0.0);
+        color: rgb(27, 25, 25);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .tui-pagination .tui-next:hover {
-        background-color:#F7F7F7;
+        background-color: #F7F7F7;
+        background-image: url(../images/arrow-left.png);
+        background-position: center;
+        background-repeat: no-repeat;
         color: #fff;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
