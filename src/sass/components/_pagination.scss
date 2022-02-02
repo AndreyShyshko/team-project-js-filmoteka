@@ -22,39 +22,35 @@
 }
 
 .tui-pagination .tui-page-btn {
-  display: inline-block;
-  position: relative;
   width: 40px;
   height: 40px;
-  padding: 15px;
-  margin-left: 0;
-  color: #333;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1;
-  text-decoration: none;
-  vertical-align: middle;
-  border: 1px solid #ddd;
+  padding: 14px 0;
+  font-weight: 500;
   border-width: 0;
 }
 .tui-pagination .tui-first-child.tui-is-selected {
-  border-left: 1px solid #ff6b08;
+  border: 1px solid $current-style-color;
 }
 .tui-pagination .tui-is-selected:hover {
-  background-color: #ff6b08;
+  background-color: $current-style-color;
+  color: $text-color;
+  transition: 250ms;
 }
 .tui-pagination .tui-page-btn:hover {
-  background-color: #ff6b08;
-  color: #fff;
+  border: 1px solid $current-style-color;
+  border-color: $current-style-color;
   border-radius: 5px;
-  // background: #F7F7F7
+  background-color: $pagination-color;
+  box-shadow: -3px 4px 21px -4px $accent-color;
+  transition: 250ms;
 }
 
 .tui-pagination .tui-is-selected,
 .tui-pagination strong {
   color: #fff;
-  background: #ff6b08;
-  border-color: #ff6b08;
+  background: $current-style-color;
+  border-color: $current-style-color;
+  box-shadow: -3px 4px 21px -4px $accent-color;
   border-radius: 5px;
   cursor: default;
 }
@@ -81,7 +77,7 @@
 }
 .tui-pagination .tui-prev {
   // transform: matrix(-1, 0, 0, 1, 0, 0);
-  // background: #F7F7F7;
+  // background: $pagination-color;
   margin-right: 10px;
   border-radius: 5px;
   background-image: url(../images/svg/arrow-right.svg);
@@ -90,7 +86,7 @@
 }
 
 .tui-pagination .tui-next {
-  // background: #F7F7F7;
+  // background: $pagination-color;
   // transform: matrix(1, 0, 0, 1, 0, 0);
   border-radius: 5px;
   margin-left: 10px;
@@ -100,11 +96,11 @@
 }
 
 .tui-pagination .tui-prev:hover {
-  background-color: #f7f7f7;
+  background-color: $pagination-color;
   color: #fff;
 }
 .tui-pagination .tui-next:hover {
-  background-color: #f7f7f7;
+  background-color: $pagination-color;
   color: #fff;
 }
 
@@ -146,12 +142,20 @@ body.dark-theme {
   .tui-ico-first {
     filter: brightness(0) invert(1);
   }
+
   & .tui-page-btn {
-    color: #ffffff;
+    color: $main-bg-color;
+  }
+
+  & .tui-page-btn:hover {
+    color: $text-color;
+    .tui-ico-ellip {
+      filter: brightness(1) invert(0);
+    }
   }
 }
 
 .tui-pagination .tui-prev,
 .tui-pagination .tui-next {
-  background-color: #f7f7f7 !important;
+  background-color: $pagination-color;
 }

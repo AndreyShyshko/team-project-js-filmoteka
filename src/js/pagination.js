@@ -4,11 +4,14 @@ import 'tui-pagination/dist/tui-pagination.css';
 // import currentPage from './filmServiceApi.js';
 // instance.getCurrentPage();
 // const currentPage = new DataFetch();
+const paginationContainer = document.getElementById('tui-pagination-container');
 
+paginationContainer.addEventListener('click', e => {
+  e.preventDefault();
+});
 
 export function renderPaginationTrendigMovie(totalItems) {
-  const container = document.getElementById('tui-pagination-container');
-//   currentPage.page = 0;
+  //   currentPage.page = 0;
   const options = {
     // below default value of options
     totalItems,
@@ -36,7 +39,7 @@ export function renderPaginationTrendigMovie(totalItems) {
     },
   };
 
-  const instance = new Pagination(container, options);
+  const instance = new Pagination(paginationContainer, options);
   // instance.getCurrentPage();
   instance.on('afterMove', event => {
     const currentPage = event.page;
