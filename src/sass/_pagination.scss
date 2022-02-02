@@ -6,7 +6,9 @@
     user-select: none;
     display: flex;
 }
-
+.tui-page-btn {
+    display: flex;
+}
 .tui-pagination {
     display: flex;
     justify-content: center;
@@ -48,6 +50,9 @@
 .tui-pagination .tui-is-selected:hover {
     background-color: #FF6B08;
 }
+.tui-page-btn {
+    display: flex;
+}
 //  .tui-page-btn:hover {
 //     background-color: #f4f4f4;
 // border-radius: 5px;
@@ -77,13 +82,12 @@
 
 .tui-page-btn:first-child,
 .tui-page-btn:last-child {
-  display: none;
+   display: none;
 }
 .tui-pagination .tui-first, .tui-pagination .tui-prev, .tui-pagination .tui-next, .tui-pagination .tui-last, .tui-pagination .tui-prev-is-ellip, .tui-pagination .tui-next-is-ellip {
     overflow: hidden;
     width: 40px;
     height: 40px;
-  
     padding: 8px;
     font-size: 0;
     line-height: 26px;
@@ -93,26 +97,25 @@
 }
 .tui-pagination .tui-prev {
     transform: matrix(-1, 0, 0, 1, 0, 0);
-     background: #F7F7F7;
+    background: #F7F7F7;
     vertical-align: middle;
     margin-right: 10px;
-     border-radius: 5px;
-
-     background-image: url(../images/arrow-left.png);
-     background-position: center;
-     background-repeat: no-repeat;
+    border-radius: 5px;
+    background-image: url(../images/arrow-left.png);
+    background-position: center;
+    background-repeat: no-repeat;
     //  background-color:rgba(247, 247, 247, 0.0);
 }
 
 .tui-pagination .tui-next {
     margin-left: 10px;
     // background: #F7F7F7;
-border-radius: 5px;
-transform: matrix(1, 0, 0, 1, 0, 0);
- background-image: url(../images/arrow-left.png);
- background-position: center;
- background-repeat: no-repeat;
- background-color: #F7F7F7;
+    border-radius: 5px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    background-image: url(../images/arrow-left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #F7F7F7;
 //  background-color:rgba(247, 247, 247, 0.0);
 }
 
@@ -122,16 +125,16 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     background-position: center;
     background-repeat: no-repeat;
         // background-color:rgba(247, 247, 247, 0.0);
-        color: rgb(27, 25, 25);
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: rgb(27, 25, 25);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .tui-pagination .tui-next:hover {
-        background-color: #F7F7F7;
-        background-image: url(../images/arrow-left.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        color: #fff;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.tui-pagination .tui-next:hover {
+    background-color: #F7F7F7;
+    background-image: url(../images/arrow-left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .tui-pagination .tui-ico-first {
@@ -165,6 +168,9 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     vertical-align: top;
     background-position: 0px -24px
 }
+ a.tui-pagination .tui-page-btn {
+    align-items: center;
+ }
 
 // body.dark-theme {
 //     .tui-ico-ellip,
