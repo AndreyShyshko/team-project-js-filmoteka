@@ -45,6 +45,9 @@ function getPage(e) {
     GetMoreMovies.incrementPage();
     return;
   } else if (e.target.textContent === 'prev') {
+    if (GetMoreMovies.page === 1) {
+      return;
+    }
     GetMoreMovies.decrementPage();
     return;
   }
