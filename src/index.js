@@ -1,9 +1,4 @@
 import './js/pagination';
-import { renderPaginationTrendigMovie } from './js/pagination';
-
-import './sass/main.scss';
-
-import { GetTrendingMoviesApi } from './js/filmoteka-api';
 import './js/change-genres-id';
 import './js/change-date-rendering';
 import './js/main-trending-markup';
@@ -11,5 +6,7 @@ import './js/search-movie-by-query';
 import './js/throw-error';
 import './js/headerChangePage';
 import './js/header-links';
+import './js/show-rating';
+import './js/search-more';
 
-renderPaginationTrendigMovie(10000);
+import './sass/main.scss';
