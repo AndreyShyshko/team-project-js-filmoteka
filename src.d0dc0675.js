@@ -94,4 +94,4 @@ const e={headerBaground:document.querySelector(".header"),headerHomeBtn:document
 },{"./main-trending-markup.js":"j3Dm"}],"Focm":[function(require,module,exports) {
 "use strict";var e=require("./js/pagination");require("./sass/main.scss");var r=require("./js/filmoteka-api");require("./js/change-genres-id"),require("./js/change-date-rendering"),require("./js/main-trending-markup"),require("./js/search-movie-by-query"),require("./js/throw-error"),require("./js/headerChangePage"),require("./js/header-links"),(0,e.renderPaginationTrendigMovie)(1e4);
 },{"./js/pagination":"o8lo","./sass/main.scss":"clu1","./js/filmoteka-api":"SaUW","./js/change-genres-id":"CGgS","./js/change-date-rendering":"hcG9","./js/main-trending-markup":"j3Dm","./js/search-movie-by-query":"iwGM","./js/throw-error":"z2lT","./js/headerChangePage":"eOtj","./js/header-links":"vU36"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-project-js-filmoteka/src.8ec532aa.js.map
+//# sourceMappingURL=/team-project-js-filmoteka/src.d0dc0675.js.map
