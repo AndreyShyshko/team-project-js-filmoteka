@@ -1,8 +1,5 @@
 import markupContentModal from '../templates/modalWindow.hbs';
 
-let modalWatchedBtnRefs;
-let modalQueueBtnRefs;
-
 const gallery = document.querySelector('#movies-gallery-container');
 const body = document.querySelector('body');
 const contentModal = document.querySelector('.content-modal');
@@ -39,12 +36,6 @@ function fetchMoviesForIdByModal(movieId) {
       console.log(results);
       const markup = markupContentModal(results);
       contentModal.insertAdjacentHTML('afterbegin', markup);
-
-      modalWatchedBtnRefs = document.querySelector('.add-to-watched');
-      modalQueueBtnRefs = document.querySelector('.add-to-queue');
-      // modalClosingCross = document.querySelector('.close-modal-window')
-
-      addClassOnBtn(movieId);
     });
 }
 
