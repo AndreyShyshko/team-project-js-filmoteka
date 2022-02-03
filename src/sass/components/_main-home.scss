@@ -48,6 +48,9 @@
 .film-prewiev-title {
   text-transform: uppercase;
   margin-bottom: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .film-prewiev-genre,
@@ -55,8 +58,13 @@
   display: inline-flex;
   color: $accent-color;
 }
+
 .film-prewiev-genre li:not(:last-child)::after {
   content: ',\A0';
+}
+
+.film-prewiev-genre li:last-child::after {
+  content: '\A0|\A0';
 }
 
 .prewiev-card {

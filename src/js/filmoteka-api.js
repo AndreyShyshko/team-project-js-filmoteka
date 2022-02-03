@@ -17,8 +17,7 @@ export default class GetMoviesApi {
     };
 
     const response = await axios.get('trending/movie/day', options);
-    //     this.incrementPage();
-    return await response.data.results;
+    return await response.data;
   }
 
   async fetchGenres() {
@@ -42,17 +41,24 @@ export default class GetMoviesApi {
     };
 
     const response = await axios.get('search/movie?', options);
-    // this.incrementPage();
-    return await response.data.results;
+    return await response.data;
   }
 
-  //   incrementPage() {
-  //     this.page += 1;
-  //   }
+  changePage(pageToMove) {
+    this.page = pageToMove;
+  }
 
-  //   resetPage() {
-  //     this.page = 1;
-  //   }
+  resetPage() {
+    this.page = 1;
+  }
+
+  incrementPage() {
+    this.page += 1;
+  }
+
+  decrementPage() {
+    this.page -= 1;
+  }
 
   get query() {
     return this.searchQuery;
