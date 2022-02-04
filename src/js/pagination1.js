@@ -34,8 +34,6 @@ const Pagination1 = {
         Pagination1.code += '<a>1</a><i>...</i>';
     },
 
-
-
     // --------------------
     // Handlers
     // --------------------
@@ -63,8 +61,6 @@ const Pagination1 = {
         }
         Pagination1.Start();
     },
-
-
 
     // --------------------
     // Script
@@ -107,8 +103,6 @@ const Pagination1 = {
         Pagination1.Finish();
     },
 
-
-
     // --------------------
     // Initialization
     // --------------------
@@ -141,8 +135,6 @@ const Pagination1 = {
         Pagination1.Start();
     }
 };
-
-
 
 /* * * * * * * * * * * * * * * * *
 * Initialization
