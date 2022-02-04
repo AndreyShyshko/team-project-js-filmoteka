@@ -10,6 +10,8 @@ import './js/show-rating';
 import './js/search-more';
 import './js/modalWindow';
 import './js/teamLightbox';
+import './js/queue'
+import './js/watched'
 import '../node_modules/basiclightbox/dist/basicLightbox.min.css';
 
 import './sass/main.scss';

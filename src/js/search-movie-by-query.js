@@ -29,7 +29,7 @@ function searchMoviesByQuery(e) {
       hideError();
 
       moviesGallery.innerHTML = '';
-      renderMarkup(responseData.results);
+      renderMarkup(responseData.results, moviesGallery);
       renderPagination(responseData.total_results);
 
       const ratingsArray = document.querySelectorAll('.film-rating');
