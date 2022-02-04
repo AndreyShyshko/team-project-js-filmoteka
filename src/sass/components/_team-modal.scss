@@ -1,111 +1,198 @@
-.basicLightbox {
-  overflow: scroll;
+.lightbox {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.team-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-
-  margin: -20px;
-
-  @media screen and (max-width: ($tablet - 1)) {
-    margin-top: 70px;
-  }
-
-  width: 240px;
-
-  background-color: $main-bg-color;
-  border-radius: 15px;
-
-  @media screen and (min-width: $tablet) {
-    width: 600px;
-
-    border-radius: 25px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    margin: -30px;
-
-    width: 800px;
-  }
+.modal-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
 }
 
-.team-card {
+.lightbox__content {
   position: relative;
+  background: var(--white);
+  padding: 15px;
+  display: inline-block;
+  height: 100vh;
+  border-radius: 4px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow-y: auto;
 
-  margin: 20px;
-
-  width: calc((100% - 80px) / 2);
-
-  @media screen and (min-width: $tablet) {
-    width: calc((100% - 160px) / 4);
+  @media screen and (max-width: 479px) {
+    width: 300px;
   }
 
-  @media screen and (min-width: $desktop) {
-    margin: 30px;
+  @media screen and (min-width: 480px) {
+    width: 350px;
+  }
 
-    width: calc((100% - 240px) / 4);
+  @media screen and (min-width: 768px) {
+    width: 500px;
+    height: 700px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 950px;
+    height: 640px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
-.team-image {
-  margin-bottom: 10px;
+//======================image-team======================
 
-  width: 110px;
-  height: 110px;
+.lightbox__image {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 
-  border-radius: 50%;
-  box-shadow: 5px 5px 11px -2px #000000;
+//====================card-team====================
+
+.team {
+  list-style: none;
+  padding-top: 30px;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-rows: 1fr;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4vw;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2vw;
+  }
+}
+
+.team-list {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.lightbox__image {
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .team-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 35px;
+
   margin-bottom: 5px;
 
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  color: var(--footer-color-text);
 }
 
-.team-role {
-  font-family: 'Roboto', sans-serif;
-
-  @media screen and (max-width: ($tablet - 1)) {
-    font-size: 14px;
-  }
-
-  color: #ff6b08;
+.contacts-link-type {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  color: var(--button-and-text-orange);
 }
 
-.team-git {
-  position: absolute;
+//-----------------------links--------------
 
-  top: 65px;
-  right: -10px;
+.modal-links {
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: 1fr;
+  //grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 
-  @media screen and (min-width: $tablet) {
-    top: 100px;
+  @media screen and (min-width: 1024px) {
+    grid-gap: 1vw;
+  }
+}
+
+.team-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: var(--footer-color-text);
+
+  border-radius: 50%;
+  transition: background-color var(--animation-duration) var(--timing-function);
+
+  &:focus,
+  &:hover {
+    background-color: var(--button-and-text-orange);
+  }
+}
+
+.social-link-icon {
+  width: 60%;
+  height: 60%;
+  fill: var(--white);
+}
+
+//===================button-modal==========================
+.button-close {
+  position: fixed;
+  display: flex;
+
+  right: calc(50% - 157.5px);
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  fill: var(--text-in-modal);
+  transition: background-color var(--animation-duration) var(--timing-function);
+  outline: none;
+
+  cursor: pointer;
+
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 479px) {
+    right: calc(50% - 165px);
+  }
+  @media screen and (min-width: 480px) {
+    right: calc(50% - 180px);
   }
 
-  @media screen and (min-width: $desktop) {
-    top: 120px;
+  @media screen and (min-width: 768px) {
+    right: calc(50% - 300px);
   }
 
-  transform: scale(1);
-  @include transition(transform);
+  @media screen and (min-width: 1024px) {
+    right: calc(50% - 490px);
+  }
 
   &:hover,
   &:focus {
-    transform: scale(1.5);
+    background-color: rgba(233, 101, 24, 0.5);
+    fill: var(--white);
   }
-}
-
-// footer
-
-.team-modal {
-  text-decoration: underline;
-
-  cursor: pointer;
 }

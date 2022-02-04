@@ -7,7 +7,9 @@ import './js/filmoteka-api';
 import './js/change-genres-id';
 import './js/main-trending-markup';
 import './js/header-links';
-import './js/teamLightbox';
-import '../node_modules/basiclightbox/dist/basicLightbox.min.css';
+//import './js/footer.js';
+import './js/footer-modal.js';
+
+
 
 renderPaginationTrendigMovie(1000);
