@@ -124,9 +124,9 @@ const Pagination1 = {
     Create: function(e) {
 
         var html = [
-            '<a>&#9668;</a>', // previous button
+            '<a class="pag-btn"></a>', // previous button
             '<span></span>',  // pagination container
-            '<a>&#9658;</a>'  // next button
+            '<a class="pag-btn-next"></a>'  // next button
         ];
 
         e.innerHTML = html.join('');
