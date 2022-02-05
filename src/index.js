@@ -11,5 +11,7 @@ import './js/search-more';
 import './js/modalWindow';
 import './js/footer';
 import './js/footer-modal';
+import './js/modalChangeEsc';
+
 
 import './sass/main.scss';
