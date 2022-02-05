@@ -1,11 +1,19 @@
 {{#each this}}
 <li class="prewiev-card">
-    <img class="film-poster" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{original_title}} poster"> 
+    {{#if this.poster_path}}
+    <img class="film-poster" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{original_title}} poster" data-action={{id}} loading="lazy"> 
+    {{else}}
+    <img class="film-poster" src="https://static7.depositphotos.com/1021974/739/i/600/depositphotos_7397821-stock-photo-cinema.jpg" alt="No poster yet" data-action={{id}} loading="lazy"> 
+    {{/if}}
     <div class="film-descr">
         <p class="film-prewiev-title">{{original_title}}</p>
-        <p class="film-prewiev-genre">{{genre_ids}} | {{release_date}}
-            <span class="film-rating isHide">{{vote_average}}</span>
-        </p>
+        <ul class="film-prewiev-genre">
+            {{#each genre_ids}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <span class="film-prewiev-date">{{release_date}}</span>
+        <span class="film-rating isHide">{{vote_average}}</span>
     </div>
 </li>
 {{/each}}

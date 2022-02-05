@@ -1,0 +1,285 @@
+.content-hidden {
+  overflow: hidden;
+}
+
+.modal-one-film {
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+
+  .content-modal {
+    z-index: 999;
+    background-color: #ffffff;
+  }
+}
+
+.modal-one-film.open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.modal-one-film__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.modal-one-film.open .modal-one-film__content {
+  transform: scale(1);
+}
+
+// ================== Стили для контента модалки ================
+
+.modal-one-film-info {
+  padding: 20px;
+  width: 287px;
+
+  @media screen and (min-width: 768px) {
+    width: 620px;
+    padding: 42px 20px 40px 20px;
+    display: flex;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 50px 30px 40px 30px;
+    width: 882px;
+    // height: 568px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+.modal-img {
+  width: 396px;
+  height: 100%;
+
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 264px;
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-width: 396px;
+    margin-right: 30px;
+  }
+  .modal-poster {
+    width: 396px;
+    // height: 477.8px;
+  }
+}
+
+.modal-name-movie {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  margin-top: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.modal-title {
+  display: flex;
+  margin-top: 20px;
+}
+
+.modal-title-info {
+  // font-style: normal;
+  // font-weight: 500;
+  // font-size: 12px;
+  // line-height: 16px;
+  // color: #8c8c8c;
+
+  // display: block;
+  width: 120px;
+  // margin-right: 39px;
+
+  height: 16px;
+  left: 527px;
+  top: 201px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8c8c8c;
+
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.modal-info {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000;
+
+  li {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .modal-genres {
+    text-transform: none;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .number {
+    display: inline-block;
+    padding-top: 1px;
+    width: 36px;
+    height: 17px;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff6b01;
+  }
+}
+
+.modal-film-about {
+  width: 396px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.modal-about {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  margin-top: 20px;
+}
+
+.modal-button-block {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 21px;
+
+  @media screen and (min-width: 1024px) {
+    justify-content: flex-start;
+  }
+
+  .modal-button {
+    background: transparent;
+    text-decoration: none;
+    border: 1px solid #000;
+    outline: 5px;
+    height: 44px;
+    width: 113px;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    @media screen and (min-width: 768px) {
+      width: 125px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 136px;
+      margin-right: 15px;
+    }
+  }
+
+  .modal-active-btn {
+    color: #fff;
+    background-color: #ff6b01;
+    border-color: #ff6b01;
+  }
+}
+
+.modal-container {
+  background-color: #ccc;
+
+  padding-top: 46px;
+  height: 230px;
+  max-width: 100%;
+
+  background-color: #ff6b01;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .modal-logo-text {
+    display: flex;
+
+    .modal-logo-nav {
+      margin-left: auto;
+      display: flex;
+      color: #000;
+    }
+  }
+
+  .modal-logo-name {
+    display: none;
+  }
+}
+
+// =========== Стили для закрытия модалки
+.close-modal-window {
+  position: absolute;
+  right: 100px;
+  top: 90px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+}
+.close-modal-window:hover {
+  opacity: 1;
+}
+.close-modal-window:before,
+.close-modal-window:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 14px;
+  width: 2px;
+  background-color: #000;
+}
+.close-modal-window:before {
+  transform: rotate(45deg);
+}
+.close-modal-window:after {
+  transform: rotate(-45deg);
+}

@@ -48,11 +48,23 @@
 .film-prewiev-title {
   text-transform: uppercase;
   margin-bottom: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.film-prewiev-genre {
-  display: inline-block;
+.film-prewiev-genre,
+.film-prewiev-date {
+  display: inline-flex;
   color: $accent-color;
+}
+
+.film-prewiev-genre li:not(:last-child)::after {
+  content: ',\A0';
+}
+
+.film-prewiev-genre li:last-child::after {
+  content: '\A0|\A0';
 }
 
 .prewiev-card {
@@ -64,7 +76,11 @@
 }
 
 .prewiev-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+
+  @media screen and (min-width: 768px) {
+    transform: scale(1.1);
+  }
 }
 
 .isHide {

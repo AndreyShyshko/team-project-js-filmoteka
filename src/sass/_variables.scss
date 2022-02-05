@@ -6,6 +6,20 @@ $text-color: #000000;
 *::before,
 *::after {
   box-sizing: inherit;
+
+$logo-svg-color: #818181;
+$current-style-color: #ff6b08;
+$error-color: #ff001b;
+$pagination-color: #f7f7f7;
+
+//Sizes/breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// mixins for transitions
+@mixin transition($property, $time: 250ms, $timingFunction: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition: $property $time $timingFunction;
 }
 
 :root {

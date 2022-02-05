@@ -1,15 +1,15 @@
 import './js/pagination';
-import { renderPaginationTrendigMovie } from './js/pagination';
+import './js/change-genres-id';
+import './js/change-date-rendering';
+import './js/main-trending-markup';
+import './js/search-movie-by-query';
+import './js/throw-error';
+import './js/headerChangePage';
+import './js/header-links';
+import './js/show-rating';
+import './js/search-more';
+import './js/modalWindow';
+import './js/footer';
+import './js/footer-modal';
 
 import './sass/main.scss';
-
-import './js/filmoteka-api';
-import './js/change-genres-id';
-import './js/main-trending-markup';
-import './js/header-links';
-//import './js/footer.js';
-import './js/footer-modal.js';
-
-
-
-renderPaginationTrendigMovie(1000);
