@@ -1,12 +1,17 @@
-<footer>
-  <div class="container">
-    <div class="page__footer">
-      <p class="copyright">&copy; 2022 | All Rights Reserved |&nbsp;</p>
-      <div class="developers">
-        <p>Developed with</p>
-        <img src="./images/orange-heart.svg" alt="иконка сердечка" class="footer__image" />
-        <p class="js-team-modal team-modal">by GoIT Students</p>
-      </div>
-    </div>
+<footer class="footer">
+  <div class="footer-block">
+    <span class="footer-information">© 2022 | All Rights Reserved | Developed with</span>
+    <svg class="footer-icon">
+      <use href="./images/sprite.svg#icon-heart"></use>
+    </svg>
+    <span>by</span>
+    <button
+      id="click"
+      type="button"
+      class="lightbox__button footer-button"
+      data-action="open-lightbox"
+    >
+      GoIT Students
+    </button>
   </div>
 </footer>
