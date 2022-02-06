@@ -10,7 +10,7 @@ import './js/header-links';
 import './js/show-rating';
 import './js/search-more';
 import './js/modalWindow';
-import './js/teamLightbox';
-import '../node_modules/basiclightbox/dist/basicLightbox.min.css';
+import './js/footer';
+import './js/footer-modal';
 
 import './sass/main.scss';

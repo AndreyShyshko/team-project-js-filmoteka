@@ -5,12 +5,14 @@ const queue = document.querySelector('.queue');
 const queueBtn = document.querySelector('#btn__header-queue');
 const watched = document.querySelector('.watched');
 const watchedBtn = document.querySelector('#btn__header-watched');
+const logoRef = document.querySelector('.header__logo');
 import { moviesGallery } from './main-trending-markup.js';
 
 homeBtn.addEventListener('click', goHome);
 libraryBtn.addEventListener('click', goLibrary);
 queueBtn.addEventListener('click', goQueue);
 watchedBtn.addEventListener('click', goWatched);
+logoRef.addEventListener('click', goHome);
 
 function goHome() {
   library.classList.add('isHide');
