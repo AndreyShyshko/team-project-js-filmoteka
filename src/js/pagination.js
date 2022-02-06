@@ -28,11 +28,16 @@ export function renderPagination(total_results) {
         '<span class="tui-ico-ellip">...</span>' +
         '</a>',
     },
+   
   };
 
   const pagination = new Pagination(paginationContainer, options);
 
   pagination.on('afterMove', event => {
-    const currentPage = event.page;
-  });
+      const currentPage = event.page;
+    //  console.log(currentPage);
+    
+  }
+  );
+ 
 }
