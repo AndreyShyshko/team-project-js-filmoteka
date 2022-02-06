@@ -30,14 +30,14 @@ function goLibrary() {
   queueBtn.classList.add('isActive');
 }
 
-function goQueue() {
+export function goQueue() {
   queueBtn.classList.add('isActive');
   watchedBtn.classList.remove('isActive');
   queue.classList.remove('isHide');
   watched.classList.add('isHide');
 }
 
-function goWatched() {
+export function goWatched() {
   watchedBtn.classList.add('isActive');
   queueBtn.classList.remove('isActive');
   queue.classList.add('isHide');

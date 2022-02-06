@@ -9,20 +9,20 @@ const GetTrendingMovies = new GetMoviesApi();
 
 GetTrendingMovies.fetchTrendingMovies()
   .then(responseData => {
-    renderMarkup(responseData.results);
+    renderMarkup(responseData.results, moviesGallery);
     renderPagination(responseData.total_results);
   })
   .catch(error => {
     console.log(error);
   });
 
-function createMoviesGallery(moviesArray) {
+function createMoviesGallery(moviesArray, domElementRef) {
   const markup = filmsTpl(moviesArray);
-  moviesGallery.insertAdjacentHTML('beforeend', markup);
+  domElementRef.innerHTML = markup;
 }
 
-export function renderMarkup(moviesArray) {
+export function renderMarkup(moviesArray, domElementRef) {
   changeGenreIdToName(moviesArray);
   changeDateRendering(moviesArray);
-  createMoviesGallery(moviesArray);
+  createMoviesGallery(moviesArray, domElementRef);
 }

@@ -10,6 +10,8 @@ import './js/header-links';
 import './js/show-rating';
 import './js/search-more';
 import './js/modalWindow';
+import './js/queue'
+import './js/watched'
 import './js/footer';
 import './js/footer-modal';
 
