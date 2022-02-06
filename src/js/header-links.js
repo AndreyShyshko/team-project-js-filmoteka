@@ -5,12 +5,14 @@ const queue = document.querySelector('.queue');
 const queueBtn = document.querySelector('#btn__header-queue');
 const watched = document.querySelector('.watched');
 const watchedBtn = document.querySelector('#btn__header-watched');
+const logoRef = document.querySelector('.header__logo');
 import { moviesGallery } from './main-trending-markup.js';
 
 homeBtn.addEventListener('click', goHome);
 libraryBtn.addEventListener('click', goLibrary);
 queueBtn.addEventListener('click', goQueue);
 watchedBtn.addEventListener('click', goWatched);
+logoRef.addEventListener('click', goHome);
 
 function goHome() {
   library.classList.add('isHide');
@@ -28,14 +30,14 @@ function goLibrary() {
   queueBtn.classList.add('isActive');
 }
 
-function goQueue() {
+export function goQueue() {
   queueBtn.classList.add('isActive');
   watchedBtn.classList.remove('isActive');
   queue.classList.remove('isHide');
   watched.classList.add('isHide');
 }
 
-function goWatched() {
+export function goWatched() {
   watchedBtn.classList.add('isActive');
   queueBtn.classList.remove('isActive');
   queue.classList.add('isHide');

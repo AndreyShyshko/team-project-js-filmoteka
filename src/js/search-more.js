@@ -17,7 +17,7 @@ function loadMoreMovies(e) {
     GetMoreMovies.fetchTrendingMovies()
       .then(responseData => {
         moviesGallery.innerHTML = '';
-        renderMarkup(responseData.results);
+        renderMarkup(responseData.results, moviesGallery);
       })
       .catch(error => {
         console.log(error);
@@ -26,7 +26,7 @@ function loadMoreMovies(e) {
     GetMoreMovies.fetchMoviesByQuery()
       .then(responseData => {
         moviesGallery.innerHTML = '';
-        renderMarkup(responseData.results);
+        renderMarkup(responseData.results, moviesGallery);
 
         const ratingsArray = document.querySelectorAll('.film-rating');
         return ratingsArray;
