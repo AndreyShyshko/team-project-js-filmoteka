@@ -1,81 +1,116 @@
-p {
-  padding: 0;
-  margin: 0;
+html {
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: #545454;
+body {
+  margin: 0;
 
-  .footer__image {
-    padding-left: 10px;
-    padding-right: 10px;
+  // Растягиваем body по высоте html
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.footer {
+  display: flex;
+  background-color: var(--pagination-and-footer-background);
+
+  left: 0px;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--footer-color-text);
+}
+
+.footer-button {
+  color: var(--footer-color-text);
+  text-decoration-line: underline;
+  cursor: pointer;
+  border: none;
+  background-color: var(--pagination-and-footer-background);
+
+  &:hover,
+  &:focus {
+    color: var(--header-line-and-numbers);
   }
+}
 
-  @media screen and (min-width: 320px) {
-    width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
+.footer-block {
+  justify-content: center;
+
+  margin: auto;
+  flex-direction: column;
+  max-width: 236px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+// иконка
+.footer-icon {
+  width: 14px;
+  height: 13px;
+  margin-top: 10px;
+}
+
+//----------плавный скролл------------------
+
+.scroll-button {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1;
+
+  right: 30px;
+  bottom: 20px;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 25%;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--header-line-and-numbers);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: background-color var(--animation-duration) var(--timing-function);
+  cursor: pointer;
+
+  @media screen and (min-width: 480px) {
+    right: 50px;
+    bottom: 20px;
   }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 75px;
-    padding-right: 75px;
+    right: 65px;
+    width: 35px;
+    height: 40px;
   }
 
   @media screen and (min-width: 1024px) {
-    width: 1024px;
-    padding-left: 71px;
-    padding-right: 71px;
-  }
-}
-
-footer {
-  background-color: rgb(247, 247, 247);
-}
-
-@media screen and (min-width: 320px) {
-  .copyright {
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    padding-top: 29px;
-    padding-bottom: 10px;
+    right: 45px;
   }
 
-  .developers {
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-  }
-  .page__footer {
-    font-size: 14px;
-    font-weight: 400;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page__footer {
-    display: flex;
-    justify-content: center;
-  }
-
-  .copyright {
-    padding-top: 30px;
-    padding-bottom: 28px;
-  }
-  .developers {
-    padding-top: 30px;
-    padding-bottom: 28px;
-  }
-
-  .page__footer {
-    font-size: 16px;
-    font-weight: 400;
+  &:hover,
+  &:focus {
+    background-color: rgba(233, 101, 24, 0.5);
+    fill: var(--black);
+    transition: background-color var(--animation-duration) var(--timing-function);
   }
 }
