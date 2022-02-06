@@ -5,7 +5,6 @@ const body = document.querySelector('body');
 const contentModal = document.querySelector('.content-modal');
 const modalWindow = document.querySelector('.modal-one-film');
 const oneFilmOwerlay = document.querySelector('.modal-one-film__overlay');
-
 gallery.addEventListener('click', openModalWindow);
 oneFilmOwerlay.addEventListener('click', closeFilmModal);
 
@@ -33,7 +32,7 @@ function fetchMoviesForIdByModal(movieId) {
       return response.json();
     })
     .then(results => {
-      console.log(results);
+      // console.log(results);
       const markup = markupContentModal(results);
       contentModal.insertAdjacentHTML('afterbegin', markup);
     });
@@ -43,9 +42,11 @@ function closeFilmModal() {
   modalWindow.classList.remove('open');
   contentModal.innerHTML = '';
   body.classList.remove('content-hidden');
-}
 
+}
 function contentHidden() {
   // запрещает пролистывать контент за модалкой
   body.classList.add('content-hidden');
 }
+
+

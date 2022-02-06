@@ -14,5 +14,7 @@ import './js/queue'
 import './js/watched'
 import './js/footer';
 import './js/footer-modal';
+import './js/modalChangeEsc';
+
 
 import './sass/main.scss';
