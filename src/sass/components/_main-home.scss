@@ -29,13 +29,13 @@
 }
 
 .film-poster {
-  width: 100%;
-  height: 402px;
-  border-radius: 5px;
+  height: 398px;
+}
 
-  @media screen and (min-width: 768px) {
-    height: 398px;
-  }
+.film-poster img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .film-descr {
@@ -57,6 +57,9 @@
 .film-prewiev-date {
   display: inline-flex;
   color: $accent-color;
+}
+.film-prewiev-date {
+  margin-left: -2px;
 }
 
 .film-prewiev-genre li:not(:last-child)::after {
