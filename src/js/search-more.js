@@ -1,7 +1,7 @@
 import { searchForm } from './search-movie-by-query';
 import { renderMarkup, moviesGallery } from './main-trending-markup';
 import { showRating } from './show-rating';
-import GetMoviesApi from './filmoteka-api.js';
+import GetMoviesApi from './filmoteka-api';
 import { Pagination } from './pagination';
 
 const GetMoreMovies = new GetMoviesApi();

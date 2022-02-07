@@ -58,10 +58,18 @@ a {
 .light-theme {
   background-color: $main-bg-color;
   color: $text-color;
+
+  & .prewiev-card:hover {
+    box-shadow: 5px -5px 10px -2px $text-color;
+  }
 }
 .dark-theme {
   background-color: $text-color;
   color: $main-bg-color;
+
+  & .prewiev-card:hover {
+    box-shadow: 5px -5px 10px -2px $accent-color;
+  }
 }
 
 .visuallyhidden {

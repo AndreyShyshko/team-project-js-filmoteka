@@ -6,7 +6,7 @@ const queueBtn = document.querySelector('#btn__header-queue');
 const watched = document.querySelector('.watched');
 const watchedBtn = document.querySelector('#btn__header-watched');
 const logoRef = document.querySelector('.header__logo');
-import { moviesGallery } from './main-trending-markup.js';
+import { moviesGallery } from './main-trending-markup';
 import { createPagination } from './pagination';
 
 homeBtn.addEventListener('click', goHome);

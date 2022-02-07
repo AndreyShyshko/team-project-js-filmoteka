@@ -58,6 +58,7 @@
   display: inline-flex;
   color: $accent-color;
 }
+
 .film-prewiev-date {
   margin-left: -2px;
 }
@@ -75,13 +76,13 @@
   background-image: url(../images/placeholder.gif);
   background-color: inherit;
   transition: 300ms;
-}
 
-.prewiev-card:hover {
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
 
-  @media screen and (min-width: 768px) {
-    transform: scale(1.1);
+    @media screen and (min-width: 768px) {
+      transform: scale(1.1);
+    }
   }
 }
 
