@@ -2,7 +2,8 @@ import GetMoviesApi from './filmoteka-api.js';
 import { renderMarkup, moviesGallery } from './main-trending-markup';
 import { showError, hideError } from './throw-error';
 import { showRating } from './show-rating';
-import { renderPagination } from './pagination.js';
+// import { renderPagination } from './pagination.js';
+import { createPagination } from './pagination1';
 
 export const searchForm = document.querySelector('.header__form');
 const GetMoviesByQuery = new GetMoviesApi();
@@ -30,7 +31,8 @@ function searchMoviesByQuery(e) {
 
       moviesGallery.innerHTML = '';
       renderMarkup(responseData.results, moviesGallery);
-      renderPagination(responseData.total_results);
+      // renderPagination(responseData.total_results);
+      document.addEventListener('DOMContentLoaded', createPagination(responseData.total_pages));
 
       const ratingsArray = document.querySelectorAll('.film-rating');
       return ratingsArray;
