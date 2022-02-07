@@ -36,7 +36,7 @@
 
   @media screen and (min-width: 768px) {
     width: 500px;
-    height: 700px;
+    height: 600px;
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -54,40 +54,40 @@
 .lightbox__image {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 30%;
 }
 
 //====================card-team====================
 
 .team {
   list-style: none;
-  padding-top: 30px;
+  padding-top: 10px;
 
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-rows: 1fr;
     // grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 4vw;
+    // grid-gap: 4vw;
   }
 
   @media screen and (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 2vw;
   }
 }
 
 .team-list {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
   }
 }
 
 .lightbox__image {
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .team-name {
@@ -111,11 +111,11 @@
 //-----------------------links--------------
 
 .modal-links {
-  margin-top: 20px;
+  margin-top: 10px;
   display: grid;
   grid-template-rows: 1fr;
   //grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 
   @media screen and (min-width: 1024px) {
     grid-gap: 1vw;
@@ -152,7 +152,7 @@
   position: fixed;
   display: flex;
 
-  right: calc(50% - 157.5px);
+  right: calc(50% - 150.7px);
 
   width: 35px;
   height: 35px;
@@ -176,18 +176,18 @@
   background-repeat: no-repeat;
 
   @media screen and (max-width: 479px) {
-    right: calc(50% - 165px);
+    right: calc(50% - 150px);
   }
   @media screen and (min-width: 480px) {
-    right: calc(50% - 180px);
+    right: calc(50% - 160px);
   }
 
   @media screen and (min-width: 768px) {
-    right: calc(50% - 300px);
+    right: calc(50% - 230px);
   }
 
   @media screen and (min-width: 1024px) {
-    right: calc(50% - 490px);
+    right: calc(50% - 460px);
   }
 
   &:hover,
@@ -195,4 +195,15 @@
     background-color: rgba(233, 101, 24, 0.5);
     fill: var(--white);
   }
+}
+
+.modal-title {
+  position: relative;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 16px;
+  color: var(--button-and-text-orange);
+
+  padding-bottom: 15px;
 }
