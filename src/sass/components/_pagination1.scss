@@ -49,6 +49,7 @@
 .pagination a.pag-current {
   color: $main-bg-color;
   background-color: $current-style-color;
+  cursor: default;
 }
 
 .pag-btn-prev,
