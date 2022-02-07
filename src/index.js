@@ -1,5 +1,4 @@
-// import './js/pagination';
-import './js/pagination1';
+import './js/pagination';
 import './js/change-genres-id';
 import './js/change-date-rendering';
 import './js/main-trending-markup';

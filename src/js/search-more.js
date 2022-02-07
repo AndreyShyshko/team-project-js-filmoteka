@@ -1,9 +1,8 @@
 import { searchForm } from './search-movie-by-query';
-// import { paginationContainer } from './pagination.js';
 import { renderMarkup, moviesGallery } from './main-trending-markup';
 import { showRating } from './show-rating';
 import GetMoviesApi from './filmoteka-api.js';
-import { Pagination } from './pagination1';
+import { Pagination } from './pagination';
 
 const GetMoreMovies = new GetMoviesApi();
 const paginationContainer = document.querySelector('#pagination');
