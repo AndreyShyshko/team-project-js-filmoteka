@@ -52,14 +52,6 @@ export default class GetMoviesApi {
     this.page = 1;
   }
 
-  incrementPage() {
-    this.page += 1;
-  }
-
-  decrementPage() {
-    this.page -= 1;
-  }
-
   get query() {
     return this.searchQuery;
   }

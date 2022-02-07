@@ -1,10 +1,14 @@
 {{#each this}}
 <li class="prewiev-card">
-    {{#if this.poster_path}}
-    <img class="film-poster" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{original_title}} poster" data-action={{id}} loading="lazy"> 
-    {{else}}
-    <img class="film-poster" src="https://static7.depositphotos.com/1021974/739/i/600/depositphotos_7397821-stock-photo-cinema.jpg" alt="No poster yet" data-action={{id}} loading="lazy"> 
-    {{/if}}
+    <div  class="film-poster">
+        {{#if this.poster_path}}
+        <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{original_title}} poster"
+        data-action={{id}} loading="lazy"> 
+        {{else}}
+        <img class="film-poster" src="https://static7.depositphotos.com/1021974/739/i/600/depositphotos_7397821-stock-photo-cinema.jpg"
+        alt="No poster yet" data-action={{id}} loading="lazy" style="object-fit: contain;"> 
+        {{/if}}
+    </div>
     <div class="film-descr">
         <p class="film-prewiev-title">{{original_title}}</p>
         <ul class="film-prewiev-genre">
