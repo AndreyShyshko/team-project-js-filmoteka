@@ -1,4 +1,4 @@
-<header class="header">
+<header>
     <div class="container">
       <nav class="header__nav">
         <a href="" class="header__logo">
@@ -23,6 +23,7 @@
           name="searchInput" 
           placeholder="Поиск фильмов" 
           class="header__form-input"
+          autocomplete="off"
           />
           <button class="header__form-submit" type="submit">
             <svg class="header__form-img">
@@ -38,8 +39,8 @@
       </div>
       <div class="header__library-content header__content-hide">
         <ul class="header__library-btnList">
-          <li><button class="btn btn-main" id="btn__header-watched">WATCHED</button></li>
-          <li><button class="btn btn-main" id="btn__header-queue">QUEUE</button></li>
+          <li><button type="button" class="btn btn-main" id="btn__header-watched">WATCHED</button></li>
+          <li><button type="button" class="btn btn-main" id="btn__header-queue">QUEUE</button></li>
         </ul>
       </div>
     </div>

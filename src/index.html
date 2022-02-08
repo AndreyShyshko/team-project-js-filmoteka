@@ -16,23 +16,31 @@
     />
   </head>
      
-  <body>
+  <body class="light-theme">
+    <header class="header">
     <include src="./partials/header.html"></include>
+  </header>
     
-    <main>
+  <main>
       <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-      <div class="container" id="movies-gallery-container">
-          <include src="./partials/main-home.html"></include>
-          <include src="./partials/main-library.html"></include>
-      </div>
+    <div class="container" id="movies-gallery-container">
+        <include src="./partials/main-home.html"></include>
+        <include src="./partials/main-library.html"></include>
+    </div>
 
 
-      <include src="./partials/pagination.html"></include>
-    </main>
+      <!-- <include src="./partials/pagination.html"></include> -->
+        <include src="./partials/pagination1.html"></include>
+  </main>
+
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/footer-modal.html"></include>
+
       <div class="modal-one-film">
         <div class="modal-one-film__overlay"></div>
         <div class="content-modal">
       </div>
+
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>

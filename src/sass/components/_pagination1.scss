@@ -1,0 +1,82 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.pages-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+
+  @media screen and (min-width: 768px) {
+    width: 340px;
+  }
+}
+
+.pagination a,
+.dots {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 12px;
+  padding: 14px 0;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.pagination a {
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.pagination a:hover {
+  background-color: rgba(255, 107, 1, 0.6);
+  color: $main-bg-color;
+}
+
+.dots {
+  width: 20px;
+}
+
+.pagination a.pag-current {
+  color: $main-bg-color;
+  background-color: $current-style-color;
+  cursor: default;
+}
+
+.pag-btn-prev,
+.pag-btn-next {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: $pagination-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 250ms;
+
+  &:hover {
+    background-color: #d4d3d3;
+  }
+
+  &:disabled {
+    background-color: $pagination-color;
+    opacity: 0.2;
+  }
+}
+
+.pag-btn-prev {
+  background-image: url(../images/svg/arrow-right.svg);
+}
+
+.pag-btn-next {
+  background-image: url(../images/svg/arrow-left.svg);
+}

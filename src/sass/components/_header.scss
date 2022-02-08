@@ -1,6 +1,14 @@
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/mobile/header_main.png);
+    url(../images/mobile/header-home-mobile@1x.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/mobile/header-home-mobile@2x.jpg);
+  }
+
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 230px;
@@ -57,7 +65,8 @@
   font-size: 12px;
   line-height: 1.17;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $accent-color;
   }
 }
@@ -83,7 +92,8 @@
   border: none;
   border-bottom: 1px solid $main-bg-color;
   color: $main-bg-color;
-  padding: 4px 0;
+  padding: 4px 20px 4px 5px;
+  outline: none;
 
   &::placeholder {
     color: $main-bg-color;
@@ -91,6 +101,12 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 0.5px solid $current-style-color;
+    background-color: rgba(180, 133, 89, 0);
   }
 }
 .header__form-submit {
@@ -135,10 +151,19 @@
 // ===============library styles===========
 .header_library {
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-    url(../images/mobile/header_library.png);
+    url(../images/mobile/header-libr-mobile.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/mobile/header-libr-mobile@2x.jpg);
+  }
+
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 230px;
+  background-position: 50% 50%;
 }
 
 .header__library-nav {
@@ -170,8 +195,9 @@
   font-size: 12px;
   line-height: 1.33;
   color: $main-bg-color;
-  &:hover {
-    background-color: $accent-color;
+  &:hover,
+  &:focus {
+    // background-color: $accent-color;
     border-color: $accent-color;
     box-shadow: -3px 4px 21px -4px $accent-color;
   }
@@ -182,7 +208,16 @@
 @media screen and (min-width: 768px) {
   .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/tablet/header_main.png);
+      url(../images/tablet/header-home-tablet@1x.jpg);
+
+    @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: 768px) and (min-resolution: 192dpi),
+      screen and (min-width: 768px) and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/tablet/header-home-tablet@2x.jpg);
+    }
+
+    background-position: 50% 50%;
     .container {
       padding-left: 71px;
       padding-right: 76px;
@@ -210,7 +245,16 @@
 
   .header_library {
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/tablet/header_library.png);
+      url(../images/tablet/header-libr-tablet.jpg);
+
+    @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: 768px) and (min-resolution: 192dpi),
+      screen and (min-width: 768px) and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/tablet/header-libr-tablet@2x.jpg);
+    }
+
+    background-position: 50% 50%;
   }
   .header__library-btnList {
     justify-content: center;
@@ -224,11 +268,34 @@
 @media screen and (min-width: 1024px) {
   .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/desktop/header_main.png);
+      url(../images/desktop/header-home-desktop@1x.jpg);
+
+    @media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: 1024px) and (min-resolution: 192dpi),
+      screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/desktop/header-home-desktop@2x.jpg);
+    }
+
+    background-position: 50% 50%;
   }
 
   .header_library {
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
-      url(../images/desktop/header_library.png);
+      url(../images/desktop/header-libr-desktop.jpg);
+
+    @media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: 1024px) and (min-resolution: 192dpi),
+      screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/desktop/header-libr-desktop@2x.jpg);
+    }
+
+    background-position: 50% 99%;
   }
+}
+.isActive {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  box-shadow: -3px 4px 21px -4px $accent-color;
 }

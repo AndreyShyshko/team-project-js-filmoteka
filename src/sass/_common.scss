@@ -55,11 +55,22 @@ a {
     padding-left: 71px;
   }
 }
-// .light-theme {
-//   background-color: $main-bg-color;
-//   color: $text-color;
-// }
-// .dark-theme {
-//   background-color: $text-color;
-//   color: $main-bg-color;
-// }
+.light-theme {
+  background-color: $main-bg-color;
+  color: $text-color;
+}
+.dark-theme {
+  background-color: $text-color;
+  color: $main-bg-color;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
