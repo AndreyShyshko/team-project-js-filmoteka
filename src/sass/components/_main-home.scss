@@ -74,6 +74,8 @@
 .prewiev-card {
   border-radius: 5px;
   background-image: url(../images/placeholder.gif);
+  background-position: center;
+  background-size: contain;
   background-color: inherit;
   transition: 300ms;
 
