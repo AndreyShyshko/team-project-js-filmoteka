@@ -79,7 +79,7 @@
 
 .team-list {
   // margin-bottom: 40px;
-
+  height: 250px;
   @media screen and (min-width: 768px) {
     //margin-bottom: 20px;
   }
@@ -87,7 +87,7 @@
 
 .lightbox__image {
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
 }
 
 .team-name {
@@ -108,17 +108,28 @@
   color: var(--button-and-text-orange);
 }
 
+.contacts-link-types {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 12px;
+  color: $logo-svg-color;
+  margin-top: 10px;
+}
+
 //-----------------------links--------------
 
 .modal-links {
-  margin-top: 10px;
-  display: grid;
-  grid-template-rows: 1fr;
+  position: relative;
+  //margin-top: 10px;
+  //display: grid;
+  // grid-template-rows: 1fr;
   //grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
-
+  // grid-template-columns: 1fr;
+  bottom: 110px;
+  left: 110px;
+  width: 21px;
   @media screen and (min-width: 1024px) {
-    grid-gap: 1vw;
+    // grid-gap: 1vw;
   }
 }
 
@@ -127,7 +138,6 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  margin-bottom: 10px;
   width: 35px;
   height: 35px;
   background-color: var(--footer-color-text);
