@@ -3,7 +3,6 @@ const contentModal = document.querySelector('.content-modal');
 const body = document.querySelector('body');
 const btn = document.querySelector('[data-modal-close]');
 
-
 function closeModal() {
   modalWindow.classList.remove('open');
   contentModal.innerHTML = '';
@@ -16,10 +15,8 @@ const onKeyPress = event => {
 
 document.addEventListener('keyup', onKeyPress);
 
+const onCloseOnBtn = () => {
+  if (modalWindow.classList.contains('open')) closeModal();
+};
 
-const onCloseOnBtn = () =>{
-if( modalWindow.classList.contains('open')) closeModal();
-}
-
-
-modalWindow.addEventListener('click', closeModal);
+// modalWindow.addEventListener('click', closeModal);
