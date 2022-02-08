@@ -5,6 +5,8 @@ const body = document.querySelector('body');
 const contentModal = document.querySelector('.content-modal');
 const modalWindow = document.querySelector('.modal-one-film');
 const oneFilmOwerlay = document.querySelector('.modal-one-film__overlay');
+const wrapper = document.querySelector('.div-wrapper');
+console.log(wrapper)
 gallery.addEventListener('click', openModalWindow);
 oneFilmOwerlay.addEventListener('click', closeFilmModal);
 
@@ -34,7 +36,7 @@ function fetchMoviesForIdByModal(movieId) {
     .then(results => {
       // console.log(results);
       const markup = markupContentModal(results);
-      contentModal.insertAdjacentHTML('afterbegin', markup);
+      wrapper.insertAdjacentHTML('afterbegin', markup);
     });
 }
 
