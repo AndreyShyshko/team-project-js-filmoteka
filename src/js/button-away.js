@@ -2,6 +2,7 @@
     'use strict';
   
     function trackScroll() {
+
       const scrolled = window.pageYOffset;
       const coords = document.documentElement.clientHeight;
   
@@ -18,7 +19,7 @@
     }
   
     const goTopBtn = document.querySelector('.header__up-btn');
-  
+
     window.addEventListener('scroll', trackScroll);
     goTopBtn.addEventListener('click', backToTop);
   })();

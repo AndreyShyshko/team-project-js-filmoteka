@@ -1,3 +1,4 @@
+
 const markupError = `<p class="header__error-text">
   Search result not successful. Enter the correct movie name and try again!
 </p>`;
