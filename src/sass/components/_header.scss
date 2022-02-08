@@ -120,8 +120,8 @@
 }
 .header__form-img {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 19px;
+  height: 19px;
   right: 3px;
   bottom: 4px;
 
@@ -197,7 +197,6 @@
   color: $main-bg-color;
   &:hover,
   &:focus {
-    // background-color: $accent-color;
     border-color: $accent-color;
     box-shadow: -3px 4px 21px -4px $accent-color;
   }

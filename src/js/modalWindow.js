@@ -16,7 +16,7 @@ function openModalWindow(evt) {
 
   contentHidden();
 
-  const idFilmFromDataAction = evt.target.attributes[3].nodeValue; // ID фильма по клику на плитку фильма
+  const idFilmFromDataAction = evt.target.attributes[2].nodeValue; // ID фильма по клику на плитку фильма
 
   fetchMoviesForIdByModal(idFilmFromDataAction); // делает запрос на сервер и добавляет розметку в модалку одного фильма
 
@@ -42,11 +42,8 @@ function closeFilmModal() {
   modalWindow.classList.remove('open');
   contentModal.innerHTML = '';
   body.classList.remove('content-hidden');
-
 }
 function contentHidden() {
   // запрещает пролистывать контент за модалкой
   body.classList.add('content-hidden');
 }
-
-
