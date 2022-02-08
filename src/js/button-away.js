@@ -2,8 +2,9 @@
     'use strict';
   
     function trackScroll() {
-      var scrolled = window.pageYOffset;
-      var coords = document.documentElement.clientHeight;
+
+      const scrolled = window.pageYOffset;
+      const coords = document.documentElement.clientHeight;
   
       if (scrolled < coords) {
         goTopBtn.classList.add('up-btn-way');
@@ -17,8 +18,8 @@
       window.scrollTo(0, 0);
     }
   
-    var goTopBtn = document.querySelector('.header__up-btn');
-  
+    const goTopBtn = document.querySelector('.header__up-btn');
+
     window.addEventListener('scroll', trackScroll);
     goTopBtn.addEventListener('click', backToTop);
   })();
