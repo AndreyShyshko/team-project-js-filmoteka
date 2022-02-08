@@ -1,6 +1,6 @@
 function smallSpinnerOn() {
   const refs = {
-      smallSpinners: document.querySelectorAll('.spinner--small'),
+    smallSpinners: document.querySelectorAll('.spinner--small'),
   };
 
   refs.smallSpinners.forEach(smallSpinner => {
@@ -13,7 +13,7 @@ function smallSpinnerOn() {
   });
 }
 function largeSpinnerOff() {
-  document.querySelector('.spinner--large').classList.add('is-hidden');
+  document.querySelector('.spinner--large').classList.add('isHide');
 }
 
 export { smallSpinnerOn, largeSpinnerOff };
