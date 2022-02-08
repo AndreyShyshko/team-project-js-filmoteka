@@ -3,6 +3,7 @@
   justify-content: center;
   font-weight: 500;
   margin-bottom: 40px;
+  
 
   @media screen and (min-width: 768px) {
     margin-bottom: 60px;
@@ -13,11 +14,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 280px;
-
-  @media screen and (min-width: 768px) {
-    width: 340px;
-  }
+  width: 340px;
+  
 }
 
 .pagination a,
@@ -27,9 +25,10 @@
   height: 40px;
   text-align: center;
   font-size: 12px;
-  padding: 14px 0;
+  padding: 13px 0;
   border-radius: 5px;
   user-select: none;
+  
 }
 
 .pagination a {
