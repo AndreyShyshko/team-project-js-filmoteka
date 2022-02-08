@@ -1,8 +1,14 @@
-const error = document.querySelector('.header__error-text');
+const markupError = `<div class="header__error js-header__error">
+<<p class="header__error-text">
+  Search result not successful. Enter the correct movie name and try again!
+</p>
+</div>`
+
+const error = document.querySelector('.header__home-content');
 
 export function showError() {
-  error.classList.remove('is-hidden');
+  error.insertAdjacentHTML("beforeend", markupError);
 }
 export function hideError() {
-  error.classList.add('is-hidden');
+  error.insertAdjacentHTML("beforeend", "")
 }
