@@ -10,6 +10,7 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link rel="icon shortcut" href="../src/images/svg/film.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
@@ -17,8 +18,8 @@
   </head>
      
   <body class="light-theme">
-    <header class="header">
-    <include src="./partials/header.html"></include>
+    <header class="header" id="header">
+      <include src="./partials/header.html"></include>
   </header>
     
   <main>
@@ -28,13 +29,13 @@
         <include src="./partials/main-library.html"></include>
     </div>
 
-
       <!-- <include src="./partials/pagination.html"></include> -->
         <include src="./partials/pagination1.html"></include>
   </main>
 
     <include src="./partials/footer.html"></include>
     <include src="./partials/footer-modal.html"></include>
+    <include src="./partials/spinner.html"></include>
 
       <div class="modal-one-film">
         <div class="modal-one-film__overlay"></div>
