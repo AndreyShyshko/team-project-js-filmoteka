@@ -5,37 +5,29 @@ const body = document.querySelector('body');
 const contentModal = document.querySelector('.content-modal');
 const modalWindow = document.querySelector('.modal-one-film');
 const oneFilmOwerlay = document.querySelector('.modal-one-film__overlay');
+
 gallery.addEventListener('click', openModalWindow);
 oneFilmOwerlay.addEventListener('click', closeFilmModal);
 
 function openModalWindow(evt) {
+  const moviesArr = JSON.parse(localStorage.getItem('fetched-movies-array'));
   if (evt.target.nodeName !== 'IMG') {
-    // проверяет клик по картинке
     return;
   }
 
   contentHidden();
 
-  const idFilmFromDataAction = evt.target.attributes[2].nodeValue; // ID фильма по клику на плитку фильма
+  const movie_id = evt.target.attributes['data-action'].nodeValue;
+  const movieInfo = moviesArr.find(movie => {
+    if (movie.id === +movie_id) {
+      return movie;
+    }
+  });
 
-  fetchMoviesForIdByModal(idFilmFromDataAction); // делает запрос на сервер и добавляет розметку в модалку одного фильма
+  const markup = markupContentModal(movieInfo);
+  contentModal.insertAdjacentHTML('afterbegin', markup);
 
-  modalWindow.classList.add('open'); // по добавлению класса открывается модалка
-}
-
-function fetchMoviesForIdByModal(movieId) {
-  // ищет фильмы по ID и добавляет розметку в gallery
-  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=219747bddc830c6768a55001e81d80ed`;
-
-  fetch(url)
-    .then(response => {
-      return response.json();
-    })
-    .then(results => {
-      // console.log(results);
-      const markup = markupContentModal(results);
-      contentModal.insertAdjacentHTML('afterbegin', markup);
-    });
+  modalWindow.classList.add('open');
 }
 
 function closeFilmModal() {
@@ -43,7 +35,8 @@ function closeFilmModal() {
   contentModal.innerHTML = '';
   body.classList.remove('content-hidden');
 }
+
+// запрещает пролистывать контент за модалкой
 function contentHidden() {
-  // запрещает пролистывать контент за модалкой
   body.classList.add('content-hidden');
 }

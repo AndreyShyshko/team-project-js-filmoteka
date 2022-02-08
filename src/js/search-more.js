@@ -10,6 +10,7 @@ const paginationContainer = document.querySelector('#pagination');
 paginationContainer.addEventListener('click', loadMoreMovies);
 
 function loadMoreMovies(e) {
+  window.scrollTo(0, 0);
   GetMoreMovies.query = searchForm.elements.searchInput.value;
   getPage(e);
   try {
