@@ -12,7 +12,6 @@ const GetTrendingMovies = new GetMoviesApi();
 GetTrendingMovies.fetchTrendingMovies()
   .then(responseData => {
     renderMarkup(responseData.results, moviesGallery);
-    largeSpinnerOff();
     // renderPagination(responseData.total_results);
     document.addEventListener('DOMContentLoaded', createPagination(responseData.total_pages));
   })
@@ -29,4 +28,5 @@ export function renderMarkup(moviesArray, domElementRef) {
   changeGenreIdToName(moviesArray);
   changeDateRendering(moviesArray);
   createMoviesGallery(moviesArray, domElementRef);
+  largeSpinnerOff();
 }
