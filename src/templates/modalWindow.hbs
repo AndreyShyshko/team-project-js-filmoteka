@@ -1,14 +1,14 @@
+
 <div class="modal-one-film-info">
     
-<div class="btn-modal" >
+     <div class="btn-modal" >
       <button data-modal-close type="button" class="btn-close">
-     <svg class="svg" >
-      <use href="../images/closeModalFilm.svg#icon-close" width="30px" height="30px"></use>
-    </svg>
+        <svg class="svg" >
+          <use href="../images/closeModalFilm.svg#icon-close" width="30px" height="30px"></use>
+        </svg>
       </button>
    
-    </div>
-
+     </div>
 
     <div class="modal-img">
         <img src="https://image.tmdb.org/t/p/w780{{poster_path}}" alt={{title}} class="modal-poster">
@@ -24,7 +24,7 @@
                 <li>Genre</li>
             </ul>
             <ul class="modal-info">
-                <li><span class="number">{{vote_average}}</span> /{{vote_count}}</li>
+                <li><span class="number">{{vote_average}}</span> /<span class="number votes">{{vote_count}}</span></li>
                 <li>{{popularity }}</li>
                 <li>{{ original_title}}</li>
                 <li>
