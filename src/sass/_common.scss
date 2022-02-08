@@ -1,8 +1,16 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main {

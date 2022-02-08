@@ -13,11 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 280px;
-
-  @media screen and (min-width: 768px) {
-    width: 340px;
-  }
+  width: 340px;
 }
 
 .pagination a,
