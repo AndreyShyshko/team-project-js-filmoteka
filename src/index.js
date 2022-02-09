@@ -15,5 +15,6 @@ import './js/watched';
 import './js/footer';
 import './js/footer-modal';
 import './js/modalChangeEsc';
+import './js/modal-handlers';
 
 import './sass/main.scss';
