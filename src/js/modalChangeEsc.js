@@ -21,4 +21,4 @@ const onCloseOnBtn = () => {
    closeModal();
 };
 
-btn.addEventListener('click', closeModal);
+btn.addEventListener('click', onCloseOnBtn);
