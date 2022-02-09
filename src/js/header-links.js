@@ -8,6 +8,7 @@ const watchedBtn = document.querySelector('#btn__header-watched');
 const logoRef = document.querySelector('.header__logo');
 import { moviesGallery } from './main-trending-markup';
 import { createPagination } from './pagination';
+import { renderQueueList } from './queue'
 
 homeBtn.addEventListener('click', goHome);
 libraryBtn.addEventListener('click', goLibrary);
@@ -32,6 +33,9 @@ function goLibrary() {
   moviesGallery.classList.add('isHide');
   queue.classList.remove('isHide');
   queueBtn.classList.add('isActive');
+
+  renderQueueList();
+
   createPagination(10); // test quantity
 }
 
