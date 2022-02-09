@@ -15,7 +15,7 @@ const onKeyPress = event => {
   if (event.code === 'Escape') closeModal();
 };
 
-document.addEventListener('keyup', onKeyPress);
+document.addEventListener('keydown', onKeyPress);
 
 const onCloseOnBtn = () => {
    closeModal();
