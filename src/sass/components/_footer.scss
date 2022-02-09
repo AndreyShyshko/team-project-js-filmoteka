@@ -1,3 +1,4 @@
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -18,7 +19,7 @@ body {
   //position: fixed;
   left: 0px;
   bottom: 0px;
-  height: 77px;
+  height: 100px;
   width: 100%;
 
   font-style: normal;
@@ -29,6 +30,10 @@ body {
   align-items: center;
   text-align: center;
   color: var(--footer-color-text);
+
+  @media screen and (min-width: 768px) {
+    height: 77px;
+  }
 }
 
 .footer-button {
