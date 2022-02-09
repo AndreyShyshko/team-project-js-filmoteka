@@ -5,6 +5,9 @@ const contentModal = document.querySelector('.content-modal');
 const modalWindow = document.querySelector('.modal-one-film');
 const oneFilmOwerlay = document.querySelector('.modal-one-film__overlay');
 
+const wrapper = document.querySelector('.div-wrapper');
+console.log(wrapper)
+
 gallery.addEventListener('click', openModalWindow);
 oneFilmOwerlay.addEventListener('click', closeFilmModal);
 
