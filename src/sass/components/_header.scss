@@ -130,7 +130,7 @@
   }
 }
 
-.header__error-text {
+/*.header__error-text {
   color: $error-color;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -142,7 +142,7 @@
     visibility: none;
     transition: 0.6s linear;
   }
-}
+}*/
 
 .header__content-hide {
   display: none;
@@ -240,6 +240,12 @@
 
   .header__error {
     text-align: center;
+    color: $error-color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  transition: 0.5s linear;
   }
 
   .header_library {
@@ -277,6 +283,9 @@
     }
 
     background-position: 50% 50%;
+    max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
   }
 
   .header_library {
@@ -291,10 +300,19 @@
     }
 
     background-position: 50% 99%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .isActive {
   background-color: $accent-color;
   border-color: $accent-color;
   box-shadow: -3px 4px 21px -4px $accent-color;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: none;
+  transition: 0.6s linear;
 }
