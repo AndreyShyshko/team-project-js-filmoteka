@@ -27,10 +27,12 @@ export function addToWatched(e) {
       const fetchList = JSON.parse(window.localStorage.getItem('fetched-movies-array'));
       const onModalFilm = fetchList.find(film => film.id === +filmId);
       watchedList.push(onModalFilm);
+      e.currentTarget.classList.add('modal-active-btn');
       e.currentTarget.innerHTML = 'Remove from watched';
     } else {
       const index = watchedList.findIndex(film => film.id === +filmId);
       watchedList.splice(index, 1);
+      e.currentTarget.classList.remove('modal-active-btn');
       e.currentTarget.innerHTML = 'Add to watched';
     }
     localStorage.setItem('watched', JSON.stringify(watchedList));
@@ -54,10 +56,12 @@ export function addToQueue(e) {
       const fetchList = JSON.parse(window.localStorage.getItem('fetched-movies-array'));
       const onModalFilm = fetchList.find(film => film.id === +filmId);
       queueList.push(onModalFilm);
+      e.currentTarget.classList.add('modal-active-btn');
       e.currentTarget.innerHTML = 'Remove from queue';
     } else {
       const index = queueList.findIndex(film => film.id === +filmId);
       queueList.splice(index, 1);
+      e.currentTarget.classList.remove('modal-active-btn');
       e.currentTarget.innerHTML = 'Add to queue';
     }
     localStorage.setItem('queue', JSON.stringify(queueList));
