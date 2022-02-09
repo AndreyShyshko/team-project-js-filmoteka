@@ -28,7 +28,7 @@ function openModalWindow(evt) {
   contentHidden();
 
   const markup = markupContentModal(movieInfo);
-  contentModal.insertAdjacentHTML('afterbegin', markup);
+  wrapper.insertAdjacentHTML('afterbegin', markup);
   initModalHandlers();
 
   const addToWatchedBtn = document.querySelector('.add-to-watched');
@@ -47,7 +47,7 @@ function openModalWindow(evt) {
 
 function closeFilmModal() {
   modalWindow.classList.remove('open');
-  contentModal.innerHTML = '';
+  wrapper.innerHTML = '';
   body.classList.remove('content-hidden');
 }
 
