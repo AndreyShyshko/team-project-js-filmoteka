@@ -1,7 +1,22 @@
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  //Растягиваем body по высоте html
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 .footer {
-  display: flex;
+  //display: flex;
   background-color: var(--pagination-and-footer-background);
-  position: relative;
+  //position: fixed;
   left: 0px;
   bottom: 0px;
   height: 100px;
@@ -36,7 +51,6 @@
 
 .footer-block {
   justify-content: center;
-
   margin: auto;
   flex-direction: column;
   max-width: 236px;
@@ -52,14 +66,14 @@
   width: 14px;
   height: 13px;
   margin-top: 10px;
-  animation: crescendo 1.5s alternate infinite ease-in;
+  animation: crescendo 0.8s alternate infinite ease-in;
 }
 @keyframes crescendo {
   0% {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.6);
   }
 }
 
