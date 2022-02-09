@@ -18,11 +18,7 @@ function openModalWindow(evt) {
   contentHidden();
 
   const movie_id = evt.target.attributes['data-action'].nodeValue;
-  const movieInfo = moviesArr.find(movie => {
-    if (movie.id === +movie_id) {
-      return movie;
-    }
-  });
+  const movieInfo = moviesArr.find(movie => movie.id === +movie_id);
 
   const markup = markupContentModal(movieInfo);
   contentModal.insertAdjacentHTML('afterbegin', markup);
