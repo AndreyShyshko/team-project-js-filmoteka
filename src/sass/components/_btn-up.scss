@@ -1,0 +1,55 @@
+.header__up-btn {
+  position: fixed;
+  bottom: 112px;
+  right: 9px;
+  z-index: 1;
+
+  @media screen and (min-width: 1024px) {
+    bottom: 114px;
+    right: 28px;
+  }
+
+  &:hover .icon-up {
+    animation: movieScale 450ms linear 55ms both;
+  }
+}
+
+.up-btn-way {
+  display: none;
+}
+
+.icon-up {
+  position: relative;
+  animation: movieScaleLoad 450ms linear 55ms both;
+}
+
+.up-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $accent-color;
+  text-align: center;
+}
+
+@keyframes movieScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.7);
+  }
+}
+
+@keyframes movieScaleLoad {
+  0% {
+    transform: rotate(360deg) scale(0.5);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}

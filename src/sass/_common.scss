@@ -1,9 +1,18 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
+
 main {
   background-color: inherit;
 }
@@ -58,10 +67,18 @@ a {
 .light-theme {
   background-color: $main-bg-color;
   color: $text-color;
+
+  & .prewiev-card:hover {
+    box-shadow: 5px -5px 10px -2px $text-color;
+  }
 }
 .dark-theme {
   background-color: $text-color;
   color: $main-bg-color;
+
+  & .prewiev-card:hover {
+    box-shadow: 5px -5px 10px -2px $accent-color;
+  }
 }
 
 .visuallyhidden {

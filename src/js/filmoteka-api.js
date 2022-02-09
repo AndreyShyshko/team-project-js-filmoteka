@@ -17,6 +17,7 @@ export default class GetMoviesApi {
     };
 
     const response = await axios.get('trending/movie/day', options);
+    localStorage.setItem('fetched-movies-array', JSON.stringify(response.data.results));
     return await response.data;
   }
 
@@ -41,6 +42,7 @@ export default class GetMoviesApi {
     };
 
     const response = await axios.get('search/movie?', options);
+    localStorage.setItem('fetched-movies-array', JSON.stringify(response.data.results));
     return await response.data;
   }
 
@@ -50,14 +52,6 @@ export default class GetMoviesApi {
 
   resetPage() {
     this.page = 1;
-  }
-
-  incrementPage() {
-    this.page += 1;
-  }
-
-  decrementPage() {
-    this.page -= 1;
   }
 
   get query() {

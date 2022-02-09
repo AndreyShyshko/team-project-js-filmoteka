@@ -1,17 +1,14 @@
+
 <div class="modal-one-film-info">
     
-<div class="btn-modal" >
-      <button data-modal-close type="button" class="btn-close">
-     <svg class="svg" >
-      <use href="../images/closeModalFilm.svg#icon-close" width="30px" height="30px"></use>
-    </svg>
-      </button>
-   
-    </div>
-
-
+  
     <div class="modal-img">
+        {{#if this.poster_path}}
         <img src="https://image.tmdb.org/t/p/w780{{poster_path}}" alt={{title}} class="modal-poster">
+        {{else}}
+        <img src="https://static7.depositphotos.com/1021974/739/i/600/depositphotos_7397821-stock-photo-cinema.jpg"
+        alt="No poster yet" style="object-fit: contain;"> 
+        {{/if}}
     </div>
     <div class="modal-text">
         <h3 class="modal-name-movie">{{original_title}}</h3>
@@ -24,7 +21,7 @@
                 <li>Genre</li>
             </ul>
             <ul class="modal-info">
-                <li><span class="number">{{vote_average}}</span> /{{vote_count}}</li>
+                <li><span class="number">{{vote_average}}</span> /<span class="number votes">{{vote_count}}</span></li>
                 <li>{{popularity }}</li>
                 <li>{{ original_title}}</li>
                 <li>

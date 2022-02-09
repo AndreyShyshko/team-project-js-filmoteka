@@ -2,11 +2,12 @@ const modalWindow = document.querySelector('.modal-one-film');
 const contentModal = document.querySelector('.content-modal');
 const body = document.querySelector('body');
 const btn = document.querySelector('[data-modal-close]');
-
-
+console.log(btn) ;
+const wrapper = document.querySelector('.div-wrapper');
+console.log(wrapper);
 function closeModal() {
   modalWindow.classList.remove('open');
-  contentModal.innerHTML = '';
+  wrapper.innerHTML = '';
   body.classList.remove('content-hidden');
 }
 
@@ -16,10 +17,8 @@ const onKeyPress = event => {
 
 document.addEventListener('keyup', onKeyPress);
 
+const onCloseOnBtn = () => {
+   closeModal();
+};
 
-const onCloseOnBtn = () =>{
-if( modalWindow.classList.contains('open')) closeModal();
-}
-
-
-modalWindow.addEventListener('click', closeModal);
+btn.addEventListener('click', closeModal);
