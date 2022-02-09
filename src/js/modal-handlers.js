@@ -1,25 +1,70 @@
-const KEYS = {
-  watched: 'watched',
-  queue: 'queue',
-};
+const WATCHED_KEY = 'watched';
+const QUEUE_KEY = 'queue';
 
-const load = key => {
+function createLocalstorageList(type) {
   try {
-    const data = localStorage.getItem(key);
-
-    return data ? JSON.parse(data) : undefined;
-  } catch (err) {
-    console.error('Get state error: ', err);
+    if (window.localStorage.getItem(type)) {
+      return;
+    }
+    window.localStorage.setItem(type, JSON.stringify([]));
+    return window.localStorage.getItem(type);
+  } catch (e) {
+    console.error(e);
   }
-};
+}
 
-const save = (key, value) => {
+export function addToWatched(e) {
   try {
-    const data = JSON.stringify(value);
-    localStorage.setItem(key, data);
-  } catch (err) {
-    console.error('Set state error: ', err);
-  }
-};
+    const filmId = e.currentTarget.getAttribute('data-idFilm');
+    const watchedList = JSON.parse(window.localStorage.getItem('watched'));
+    // const filmAlreadyInList = watchedList.includes(filmId);
+    const filmAlreadyInList = watchedList.some(film => film.id === +filmId);
 
-export default { load, save, KEYS };
+    if (!filmAlreadyInList) {
+      const fetchList = JSON.parse(window.localStorage.getItem('trendFilms'));
+      const onModalFilm = fetchList.find(film => film.id === +filmId);
+      watchedList.push(onModalFilm);
+      e.currentTarget.innerHTML = 'Remove from watched';
+    } else {
+      const index = watchedList.findIndex(film => film.id === +filmId);
+      watchedList.splice(index, 1);
+      e.currentTarget.innerHTML = 'Add to watched';
+    }
+    localStorage.setItem('watched', JSON.stringify(watchedList));
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+export function addToQueue(e) {
+  try {
+    const filmId = e.currentTarget.getAttribute('data-idFilm');
+    const queueList = JSON.parse(window.localStorage.getItem('queue'));
+    // const filmAlreadyInList = queueList.includes(filmId);
+    const filmAlreadyInList = queueList.some(film => film.id === +filmId);
+
+    if (!filmAlreadyInList) {
+      const fetchList = JSON.parse(window.localStorage.getItem('trendFilms'));
+      const onModalFilm = fetchList.find(film => film.id === +filmId);
+      queueList.push(onModalFilm);
+      e.currentTarget.innerHTML = 'Remove from queue';
+    } else {
+      const index = queueList.findIndex(film => film.id === +filmId);
+      queueList.splice(index, 1);
+      e.currentTarget.innerHTML = 'Add to queue';
+    }
+    localStorage.setItem('queue', JSON.stringify(queueList));
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+export function initModalHandlers() {
+  createLocalstorageList(WATCHED_KEY);
+  createLocalstorageList(QUEUE_KEY);
+
+  const watchBtn = document.querySelector('.add-to-watched');
+  watchBtn.addEventListener('click', addToWatched);
+  const queueBtn = document.querySelector('.add-to-queue');
+  queueBtn.addEventListener('click', addToQueue);
+}
