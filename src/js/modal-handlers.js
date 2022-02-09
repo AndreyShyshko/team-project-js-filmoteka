@@ -1,7 +1,7 @@
 const WATCHED_KEY = 'watched';
 const QUEUE_KEY = 'queue';
 
-function createLocalstorageList(type) {
+export function createLocalstorageList(type) {
   try {
     if (window.localStorage.getItem(type)) {
       return;
@@ -21,7 +21,7 @@ export function addToWatched(e) {
     const filmAlreadyInList = watchedList.some(film => film.id === +filmId);
 
     if (!filmAlreadyInList) {
-      const fetchList = JSON.parse(window.localStorage.getItem('trendFilms'));
+      const fetchList = JSON.parse(window.localStorage.getItem('fetched-movies-array'));
       const onModalFilm = fetchList.find(film => film.id === +filmId);
       watchedList.push(onModalFilm);
       e.currentTarget.innerHTML = 'Remove from watched';
@@ -44,7 +44,7 @@ export function addToQueue(e) {
     const filmAlreadyInList = queueList.some(film => film.id === +filmId);
 
     if (!filmAlreadyInList) {
-      const fetchList = JSON.parse(window.localStorage.getItem('trendFilms'));
+      const fetchList = JSON.parse(window.localStorage.getItem('fetched-movies-array'));
       const onModalFilm = fetchList.find(film => film.id === +filmId);
       queueList.push(onModalFilm);
       e.currentTarget.innerHTML = 'Remove from queue';
@@ -60,9 +60,6 @@ export function addToQueue(e) {
 }
 
 export function initModalHandlers() {
-  createLocalstorageList(WATCHED_KEY);
-  createLocalstorageList(QUEUE_KEY);
-
   const watchBtn = document.querySelector('.add-to-watched');
   watchBtn.addEventListener('click', addToWatched);
   const queueBtn = document.querySelector('.add-to-queue');

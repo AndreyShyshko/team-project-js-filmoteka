@@ -4,9 +4,10 @@ const body = document.querySelector('body');
 const contentModal = document.querySelector('.content-modal');
 const modalWindow = document.querySelector('.modal-one-film');
 const oneFilmOwerlay = document.querySelector('.modal-one-film__overlay');
+import { initModalHandlers } from './modal-handlers';
 
 const wrapper = document.querySelector('.div-wrapper');
-console.log(wrapper)
+// console.log(wrapper)
 
 gallery.addEventListener('click', openModalWindow);
 oneFilmOwerlay.addEventListener('click', closeFilmModal);
@@ -28,6 +29,7 @@ function openModalWindow(evt) {
 
   const markup = markupContentModal(movieInfo);
   contentModal.insertAdjacentHTML('afterbegin', markup);
+  initModalHandlers();
 
   const addToWatchedBtn = document.querySelector('.add-to-watched');
   const addToQueueBtn = document.querySelector('.add-to-queue');
