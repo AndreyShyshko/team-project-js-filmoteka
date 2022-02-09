@@ -36,10 +36,12 @@ function openModalWindow(evt) {
 
   if (movieExistsInWatched) {
     addToWatchedBtn.innerHTML = 'Remove from watched';
+    addToWatchedBtn.classList.add('modal-active-btn');
   }
 
   if (movieExistsInQueue) {
     addToQueueBtn.innerHTML = 'Remove from queue';
+    addToQueueBtn.classList.add('modal-active-btn');
   }
 
   modalWindow.classList.add('open');
