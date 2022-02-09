@@ -4,7 +4,6 @@ const refs = {
     closeFooterModal: document.querySelector('[data-action="close-lightbox"]'),
     lightboxFooterModal: document.querySelector('.js-lightbox'),
     backdropClick: document.querySelector('.modal-background'),
-    
 };
 
 //================================открыть модалку ========================================

@@ -6,8 +6,7 @@ const queueBtn = document.querySelector('#btn__header-queue');
 const watched = document.querySelector('.watched');
 const watchedBtn = document.querySelector('#btn__header-watched');
 const logoRef = document.querySelector('.header__logo');
-import { moviesGallery } from './main-trending-markup';
-import { createPagination } from './pagination';
+import { moviesGallery } from './main-trending-markup.js';
 
 homeBtn.addEventListener('click', goHome);
 libraryBtn.addEventListener('click', goLibrary);
@@ -22,9 +21,6 @@ function goHome() {
   moviesGallery.classList.remove('isHide');
   watchedBtn.classList.remove('isActive');
   queueBtn.classList.remove('isActive');
-
-  const homeTotalPages = localStorage.getItem('home_total_pages');
-  createPagination(+homeTotalPages);
 }
 
 function goLibrary() {
@@ -32,7 +28,6 @@ function goLibrary() {
   moviesGallery.classList.add('isHide');
   queue.classList.remove('isHide');
   queueBtn.classList.add('isActive');
-  createPagination(10); // test quantity
 }
 
 export function goQueue() {
