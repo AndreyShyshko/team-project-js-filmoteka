@@ -1,3 +1,6 @@
+import { watchedContainerRef, renderWatchedList } from './watched';
+import { queueContainerRef, renderQueueList } from './queue';
+
 const WATCHED_KEY = 'watched';
 const QUEUE_KEY = 'queue';
 
@@ -31,6 +34,10 @@ export function addToWatched(e) {
       e.currentTarget.innerHTML = 'Add to watched';
     }
     localStorage.setItem('watched', JSON.stringify(watchedList));
+
+    if (!watchedContainerRef.classList.contains('isHide')) {
+      renderWatchedList();
+    }
   } catch (e) {
     console.error(e);
   }
@@ -54,6 +61,10 @@ export function addToQueue(e) {
       e.currentTarget.innerHTML = 'Add to queue';
     }
     localStorage.setItem('queue', JSON.stringify(queueList));
+
+    if (!queueContainerRef.classList.contains('isHide')) {
+      renderQueueList();
+    }
   } catch (e) {
     console.error(e);
   }
