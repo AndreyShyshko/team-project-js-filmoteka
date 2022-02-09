@@ -1,46 +1,40 @@
 import markupContentModal from '../templates/modalWindow.hbs';
+
 const gallery = document.querySelector('#movies-gallery-container');
 const body = document.querySelector('body');
 const contentModal = document.querySelector('.content-modal');
 const modalWindow = document.querySelector('.modal-one-film');
 const oneFilmOwerlay = document.querySelector('.modal-one-film__overlay');
-
-const wrapper = document.querySelector('.div-wrapper');
-console.log(wrapper)
-
 gallery.addEventListener('click', openModalWindow);
 oneFilmOwerlay.addEventListener('click', closeFilmModal);
 
 function openModalWindow(evt) {
-  const moviesArr = JSON.parse(localStorage.getItem('fetched-movies-array'));
-  const watchedMoviesList = JSON.parse(localStorage.getItem('watched'));
-  const queueMoviesList = JSON.parse(localStorage.getItem('queue'));
-  const movie_id = evt.target.attributes['data-action'].nodeValue;
-  const movieInfo = moviesArr.find(movie => movie.id === +movie_id);
-  const movieExistsInWatched = watchedMoviesList.find(movie => movie.id === +movie_id);
-  const movieExistsInQueue = queueMoviesList.find(movie => movie.id === +movie_id);
-
   if (evt.target.nodeName !== 'IMG') {
+    // проверяет клик по картинке
     return;
   }
 
   contentHidden();
 
-  const markup = markupContentModal(movieInfo);
-  contentModal.insertAdjacentHTML('afterbegin', markup);
+  const idFilmFromDataAction = evt.target.attributes[3].nodeValue; // ID фильма по клику на плитку фильма
 
-  const addToWatchedBtn = document.querySelector('.add-to-watched');
-  const addToQueueBtn = document.querySelector('.add-to-queue');
+  fetchMoviesForIdByModal(idFilmFromDataAction); // делает запрос на сервер и добавляет розметку в модалку одного фильма
 
-  if (movieExistsInWatched) {
-    addToWatchedBtn.innerHTML = 'Remove from watched';
-  }
+  modalWindow.classList.add('open'); // по добавлению класса открывается модалка
+}
 
-  if (movieExistsInQueue) {
-    addToQueueBtn.innerHTML = 'Remove from queue';
-  }
+function fetchMoviesForIdByModal(movieId) {
+  // ищет фильмы по ID и добавляет розметку в gallery
+  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=219747bddc830c6768a55001e81d80ed`;
 
-  modalWindow.classList.add('open');
+  fetch(url)
+    .then(response => {
+      return response.json();
+    })
+    .then(results => {
+      const markup = markupContentModal(results);
+      contentModal.insertAdjacentHTML('afterbegin', markup);
+    });
 }
 
 function closeFilmModal() {
@@ -48,8 +42,7 @@ function closeFilmModal() {
   contentModal.innerHTML = '';
   body.classList.remove('content-hidden');
 }
-
-// запрещает пролистывать контент за модалкой
 function contentHidden() {
+  // запрещает пролистывать контент за модалкой
   body.classList.add('content-hidden');
 }

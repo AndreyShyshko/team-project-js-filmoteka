@@ -1,49 +1,51 @@
+<div class='modal-one-film-info'>
 
-<div class="modal-one-film-info">
-    
-  
-    <div class="modal-img">
-        {{#if this.poster_path}}
-        <img src="https://image.tmdb.org/t/p/w780{{poster_path}}" alt={{title}} class="modal-poster">
-        {{else}}
-        <img src="https://static7.depositphotos.com/1021974/739/i/600/depositphotos_7397821-stock-photo-cinema.jpg"
-        alt="No poster yet" style="object-fit: contain;"> 
-        {{/if}}
-    </div>
-    <div class="modal-text">
-        <h3 class="modal-name-movie">{{original_title}}</h3>
-        {{!-- <a href="#" class="close-modal-window"></a> --}}
-        <div class="modal-title">
-            <ul class="modal-title-info">
-                <li>Vote / Votes</li>
-                <li>Popularity</li>
-                <li>Original Title</li>
-                <li>Genre</li>
-            </ul>
-            <ul class="modal-info">
-                <li><span class="number">{{vote_average}}</span> /<span class="number votes">{{vote_count}}</span></li>
-                <li>{{popularity }}</li>
-                <li>{{ original_title}}</li>
-                <li>
-                    {{#each genres}}
-                    <span class="modal-genres"> {{name}}
-                        {{/each}}
-                    </span>
-                </li>
-            </ul>
-        </div>
-        <div class="modal-about">About</div>
-        <p class="modal-film-about">
-            {{overview}}
-        </p>
+  <div class='btn-modal'>
+    <button data-modal-close type='button' class='btn-close'>
+      <svg class='svg'>
+        <use href='../images/closeModalFilm.svg#icon-close' width='30px' height='30px'></use>
+      </svg>
+    </button>
+  </div>
 
-        <div class="modal-button-block">
-            <button type=" button " class="modal-button add-to-watched " data-idFilm="{{id}}" data-btn="watched">Add to
-                watched</button>
-            <button type=" button " class="modal-button add-to-queue " data-idFilm="{{id}}" data-btn="queue">Add to
-                queue</button>
-        </div>
+  <div class='modal-img'>
+    <img src='https://image.tmdb.org/t/p/w780{{poster_path}}' alt={{title}} class='modal-poster' />
+  </div>
+  <div class='modal-text'>
+    <h3 class='modal-name-movie'>{{original_title}}</h3>
+    <div class="modal-title">            
+      <div  class="modal-title-info">
+        <p>Vote / Votes</p>
+        <p>Popularity</p>
+        <p>Original Title</p>
+        <p>Genre</p>
+      </div>
+
+      <div class="modal-info">
+        <p><span class="number">{{vote_average}}</span> /{{vote_count}}</p>
+        <p>{{popularity }}</p>
+        <p>{{ original_title}}</p>
+        <p>{{#each genres}}<span class="modal-genres"> {{name}},{{/each}}</span></p>
+      </div>
     </div>
+
+
+    <h4 class='modal-about'>About</h4>
+    <p class='modal-film-about'>{{overview}}</p>
+
+    <div class='modal-button-block'>
+      <button
+        type=' button '
+        class='modal-button add-to-watched'
+        data-idFilm='{{id}}'
+        data-btn='watched'
+      >Add to watched</button>
+      <button
+        type=' button '
+        class='modal-button add-to-queue'
+        data-idFilm='{{id}}'
+        data-btn='queue'
+      >Add to queue</button>
+    </div>
+  </div>
 </div>
-
-
