@@ -2,9 +2,9 @@ const modalWindow = document.querySelector('.modal-one-film');
 const contentModal = document.querySelector('.content-modal');
 const body = document.querySelector('body');
 const btn = document.querySelector('[data-modal-close]');
-// console.log(btn) ;
+console.log(btn) ;
 const wrapper = document.querySelector('.div-wrapper');
-// console.log(wrapper);
+console.log(wrapper);
 function closeModal() {
   modalWindow.classList.remove('open');
   wrapper.innerHTML = '';
@@ -19,6 +19,7 @@ document.addEventListener('keydown', onKeyPress);
 
 const onCloseOnBtn = () => {
    closeModal();
+   console.log("tut vse norm")
 };
 
-btn.addEventListener('click', closeModal);
+btn.addEventListener('click', onCloseOnBtn);
