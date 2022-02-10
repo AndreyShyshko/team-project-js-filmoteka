@@ -117,6 +117,7 @@
   height: 22px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .header__form-img {
   position: absolute;
@@ -241,11 +242,11 @@
   .header__error {
     text-align: center;
     color: $error-color;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  transition: 0.5s linear;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    transition: 0.5s linear;
   }
 
   .header_library {
@@ -284,8 +285,8 @@
 
     background-position: 50% 50%;
     max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header_library {
@@ -306,8 +307,9 @@
   }
 }
 .isActive {
-  background-color: $accent-color;
-  border-color: $accent-color;
+  background-color: $accent-color !important;
+  border-color: $accent-color !important;
+  color: $main-bg-color !important;
   box-shadow: -3px 4px 21px -4px $accent-color;
 }
 

@@ -20,7 +20,6 @@ export function addToWatched(e) {
   try {
     const filmId = e.currentTarget.getAttribute('data-idFilm');
     const watchedList = JSON.parse(window.localStorage.getItem('watched'));
-    // const filmAlreadyInList = watchedList.includes(filmId);
     const filmAlreadyInList = watchedList.some(film => film.id === +filmId);
 
     if (!filmAlreadyInList) {
@@ -51,7 +50,6 @@ export function addToQueue(e) {
   try {
     const filmId = e.currentTarget.getAttribute('data-idFilm');
     const queueList = JSON.parse(window.localStorage.getItem('queue'));
-    // const filmAlreadyInList = queueList.includes(filmId);
     const filmAlreadyInList = queueList.some(film => film.id === +filmId);
 
     if (!filmAlreadyInList) {

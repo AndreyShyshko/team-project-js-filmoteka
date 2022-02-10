@@ -1,36 +1,17 @@
-// .btn-close {
-//     position: absolute;
-//     background-color: transparent;
-//     top: 10px;
-//     right: 10px;
-//     width: 40px;
-//     height: 40px;
-//     border: none;
-//     // background-color: red;
-//     cursor: pointer;
-
-//   }
- 
-
 .svg {
+  width: 35px;
+  height: 35px;
+}
+.content-modal {
+  position: relative;
+}
 
-   
-    width: 35px;
-    height: 35px;
-
-  }
-  .content-modal {
-      position: relative;
-  }
-  
-.btn-close{
+.btn-close {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 35px;
   height: 35px;
-  // display: flex;
-  // align-items: center;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -39,9 +20,12 @@
   transition-property: box-shadow;
   transition-duration: 400ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
-.btn-close:hover, .btn-close:focus {
-  box-shadow: 0 2.8px 2.2px #9b8573, 0 6.7px 5.3px #da690c, 0 1.5px 10px rgba(221, 126, 37, 0.856), 0 2.3px 17.9px rgba(221, 126, 37, 0.856);
+.btn-close:hover,
+.btn-close:focus {
+  box-shadow: 0 2.8px 2.2px #9b8573, 0 6.7px 5.3px #da690c, 0 1.5px 10px rgba(221, 126, 37, 0.856),
+    0 2.3px 17.9px rgba(221, 126, 37, 0.856);
 }
 
 .btn-close svg {
@@ -50,7 +34,8 @@
   transition-duration: 400ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn-close svg:hover, .btn-close svg:focus {
+.btn-close svg:hover,
+.btn-close svg:focus {
   // stroke: #ff6b08;
   fill: #ff6b08;
 }

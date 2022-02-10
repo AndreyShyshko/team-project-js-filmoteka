@@ -78,16 +78,18 @@
   background-size: contain;
   background-color: inherit;
   transition: 300ms;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
+
+    & .film-poster img {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
 
     @media screen and (min-width: 768px) {
       transform: scale(1.1);
     }
   }
-}
-
-.isHide {
-  display: none;
 }
