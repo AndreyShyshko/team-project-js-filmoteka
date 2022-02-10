@@ -14,9 +14,11 @@ body {
   overflow: scroll;
 }
 
-/*main {
-  background-color: inherit;
-}*/
+.empty {
+  background-image: url(../images/empty.webp);
+  background-size: cover;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -78,7 +80,6 @@ a {
   background-image: url(../images/desktop/bg-dark-4783.png);
   background-position: center center;
   color: $main-bg-color;
-  
 
   & .prewiev-card:hover {
     box-shadow: 5px -5px 10px -2px $accent-color;
