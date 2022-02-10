@@ -7,7 +7,12 @@ const watchedBtn = document.querySelector('#btn__header-watched');
 export function renderWatchedList() {
   // try {
   const data = JSON.parse(localStorage.getItem('watched'));
-  renderMarkup(data, watchedContainerRef);
+  if (data.length == 0) {
+    document.querySelector('main').classList.add('empty');
+  } else {
+    document.querySelector('main').classList.remove('empty');
+    renderMarkup(data, queueContainerRef);
+  }
   goWatched();
   // } catch {
   //   console.log('Empty');
