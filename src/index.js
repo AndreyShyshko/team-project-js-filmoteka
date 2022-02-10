@@ -6,6 +6,7 @@ import './js/search-movie-by-query';
 import './js/throw-error';
 import './js/headerChangePage';
 import './js/button-away';
+import './js/changeTheme';
 import './js/header-links';
 import './js/show-rating';
 import './js/search-more';

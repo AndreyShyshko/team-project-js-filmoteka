@@ -24,6 +24,7 @@
 .modal-one-film.open {
   opacity: 1;
   pointer-events: initial;
+  z-index: 998;
 }
 
 .modal-one-film__overlay {

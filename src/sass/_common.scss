@@ -13,9 +13,9 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-main {
+/*main {
   background-color: inherit;
-}
+}*/
 img {
   display: block;
   max-width: 100%;
@@ -74,7 +74,10 @@ a {
 }
 .dark-theme {
   background-color: $text-color;
+  background-image: url(../images/desktop/bg-dark-4783.png);
+  background-position: center center;
   color: $main-bg-color;
+  
 
   & .prewiev-card:hover {
     box-shadow: 5px -5px 10px -2px $accent-color;
