@@ -1,9 +1,6 @@
 import { createPagination } from './pagination';
-
 import { libraryBtn, queueBtn, watchedBtn } from './header-links';
-// const libraryBtn = document.querySelector('#headerLibraryBtn');
-// const queueBtn = document.querySelector('#btn__header-queue');
-// const watchedBtn = document.querySelector('#btn__header-watched');
+
 const libraryPagination = document.querySelector('#pagination');
 
 const getTotalMovies = moviesQty => {
