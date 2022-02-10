@@ -10,6 +10,7 @@ import { moviesGallery, pagination } from './main-trending-markup';
 import { createPagination } from './pagination';
 import { renderQueueList } from './queue';
 import { showRating } from './show-rating';
+const main = document.querySelector('main');
 
 homeBtn.addEventListener('click', goHome);
 libraryBtn.addEventListener('click', goLibrary);
@@ -18,6 +19,7 @@ watchedBtn.addEventListener('click', goWatched);
 logoRef.addEventListener('click', goHome);
 
 function goHome() {
+  main.classList.remove('empty');
   library.classList.add('isHide');
   queue.classList.add('isHide');
   watched.classList.add('isHide');
