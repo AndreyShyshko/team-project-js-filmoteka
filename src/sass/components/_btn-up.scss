@@ -1,13 +1,12 @@
 .header__up-btn {
   position: fixed;
-  bottom: 112px;
-  right: 2px;
-  z-index: 997;
+  bottom: 190px;
+  right: 10px;
+  z-index: 1;
   text-align: center;
 
   @media screen and (min-width: 768px) {
-    bottom: 200px;
-    right: 2px;
+    bottom: 120px;
 
     &:hover .icon-up {
       animation: movieScale 450ms linear 55ms both;
@@ -30,14 +29,14 @@
   height: 42px;
 
   @media screen and (min-width: 768px) {
-  animation: movieScaleLoad 450ms linear 55ms both;
-  width: 45px;
-  height: 45px;
+    animation: movieScaleLoad 450ms linear 55ms both;
+    width: 45px;
+    height: 45px;
   }
 
   @media screen and (min-width: 1024px) {
-  width: 60px;
-  height: 60px;
+    width: 60px;
+    height: 60px;
   }
 }
 

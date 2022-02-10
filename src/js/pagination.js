@@ -110,9 +110,9 @@ export const Pagination = {
   // create skeleton
   Create: function (domElem) {
     const html = [
-      '<button type="button" disabled class="pag-btn-prev"></button>', // previous button
-      '<span class="pages-list"></span>', // pagination container
-      '<button type="button" class="pag-btn-next"></button>', // next button
+      '<button type="button" disabled class="pag-btn-prev"></button>',
+      '<span class="pages-list"></span>',
+      '<button type="button" class="pag-btn-next"></button>',
     ];
     domElem.innerHTML = html.join('');
     Pagination.domElem = domElem.getElementsByTagName('span')[0];
@@ -133,8 +133,8 @@ export const Pagination = {
 
 export function createPagination(total_pages) {
   Pagination.Init(document.getElementById('pagination'), {
-    size: total_pages, // pages size
-    page: 1, // selected page
-    step: 2, // pages before and after current
+    size: total_pages,
+    page: 1,
+    step: 2,
   });
 }
