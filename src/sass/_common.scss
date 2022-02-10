@@ -16,7 +16,8 @@ body {
 
 .empty {
   background-image: url(../images/empty.webp);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 }
 

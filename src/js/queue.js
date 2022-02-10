@@ -9,6 +9,7 @@ export function renderQueueList() {
   const data = JSON.parse(localStorage.getItem('queue'));
   if (data.length == 0) {
     document.querySelector('main').classList.add('empty');
+    renderMarkup(data, queueContainerRef);
   } else {
     document.querySelector('main').classList.remove('empty');
     renderMarkup(data, queueContainerRef);
