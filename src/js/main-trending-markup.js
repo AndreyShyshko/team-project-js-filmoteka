@@ -11,14 +11,21 @@ const QUEUE_KEY = 'queue';
 
 export const moviesGallery = document.querySelector('.home-container');
 const GetTrendingMovies = new GetMoviesApi();
+export const pagination = document.querySelector('#pagination');
 
 GetTrendingMovies.fetchTrendingMovies()
   .then(responseData => {
+    changeDateRendering(responseData.results);
     renderMarkup(responseData.results, moviesGallery);
+
     localStorage.setItem('home_total_pages', `${responseData.total_pages}`);
+    localStorage.setItem('fetched-movies-array', JSON.stringify(responseData.results));
+
     createLocalstorageList(WATCHED_KEY);
     createLocalstorageList(QUEUE_KEY);
+
     document.addEventListener('DOMContentLoaded', createPagination(responseData.total_pages));
+    pagination.classList.remove('isHide');
   })
   .catch(error => {
     console.log(error);
@@ -31,7 +38,6 @@ function createMoviesGallery(moviesArray, domElementRef) {
 
 export function renderMarkup(moviesArray, domElementRef) {
   changeGenreIdToName(moviesArray);
-  changeDateRendering(moviesArray);
   createMoviesGallery(moviesArray, domElementRef);
   largeSpinnerOff();
 }
