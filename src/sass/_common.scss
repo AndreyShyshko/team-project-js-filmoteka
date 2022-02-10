@@ -11,12 +11,13 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .empty {
   background-image: url(../images/empty.webp);
   background-size: cover;
+  background-position: center;
 }
 
 img {
