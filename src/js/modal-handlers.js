@@ -20,7 +20,6 @@ export function addToWatched(e) {
   try {
     const filmId = e.currentTarget.getAttribute('data-idFilm');
     const watchedList = JSON.parse(window.localStorage.getItem('watched'));
-    // const filmAlreadyInList = watchedList.includes(filmId);
     const filmAlreadyInList = watchedList.some(film => film.id === +filmId);
 
     if (!filmAlreadyInList) {
@@ -29,11 +28,13 @@ export function addToWatched(e) {
       watchedList.push(onModalFilm);
       e.currentTarget.classList.add('modal-active-btn');
       e.currentTarget.innerHTML = 'Remove from watched';
+      e.currentTarget.classList.add('isActive');
     } else {
       const index = watchedList.findIndex(film => film.id === +filmId);
       watchedList.splice(index, 1);
       e.currentTarget.classList.remove('modal-active-btn');
       e.currentTarget.innerHTML = 'Add to watched';
+      e.currentTarget.classList.remove('isActive');
     }
     localStorage.setItem('watched', JSON.stringify(watchedList));
 
@@ -49,7 +50,6 @@ export function addToQueue(e) {
   try {
     const filmId = e.currentTarget.getAttribute('data-idFilm');
     const queueList = JSON.parse(window.localStorage.getItem('queue'));
-    // const filmAlreadyInList = queueList.includes(filmId);
     const filmAlreadyInList = queueList.some(film => film.id === +filmId);
 
     if (!filmAlreadyInList) {
@@ -58,11 +58,13 @@ export function addToQueue(e) {
       queueList.push(onModalFilm);
       e.currentTarget.classList.add('modal-active-btn');
       e.currentTarget.innerHTML = 'Remove from queue';
+      e.currentTarget.classList.add('isActive');
     } else {
       const index = queueList.findIndex(film => film.id === +filmId);
       queueList.splice(index, 1);
       e.currentTarget.classList.remove('modal-active-btn');
       e.currentTarget.innerHTML = 'Add to queue';
+      e.currentTarget.classList.remove('isActive');
     }
     localStorage.setItem('queue', JSON.stringify(queueList));
 

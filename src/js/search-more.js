@@ -1,5 +1,6 @@
 import { searchForm } from './search-movie-by-query';
 import { renderMarkup, moviesGallery } from './main-trending-markup';
+import { changeDateRendering } from './change-date-rendering';
 import { showRating } from './show-rating';
 import GetMoviesApi from './filmoteka-api';
 import { Pagination } from './pagination';
@@ -17,7 +18,9 @@ function loadMoreMovies(e) {
     if (!GetMoreMovies.query) {
       GetMoreMovies.fetchTrendingMovies().then(responseData => {
         moviesGallery.innerHTML = '';
+        changeDateRendering(responseData.results);
         renderMarkup(responseData.results, moviesGallery);
+        localStorage.setItem('fetched-movies-array', JSON.stringify(responseData.results));
       });
     } else if (GetMoreMovies.query !== searchForm.elements.searchInput.value) {
       GetMoreMovies.resetPage();
@@ -25,7 +28,9 @@ function loadMoreMovies(e) {
       GetMoreMovies.fetchMoviesByQuery()
         .then(responseData => {
           moviesGallery.innerHTML = '';
+          changeDateRendering(responseData.results);
           renderMarkup(responseData.results, moviesGallery);
+          localStorage.setItem('fetched-movies-array', JSON.stringify(responseData.results));
 
           const ratingsArray = document.querySelectorAll('.film-rating');
           return ratingsArray;

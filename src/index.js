@@ -17,5 +17,6 @@ import './js/footer';
 import './js/footer-modal';
 import './js/modalChangeEsc';
 import './js/modal-handlers';
+import './js/library-pagination';
 
 import './sass/main.scss';

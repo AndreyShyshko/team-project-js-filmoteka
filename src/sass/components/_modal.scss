@@ -17,7 +17,7 @@
 
   .content-modal {
     z-index: 999;
-    background-color: #ffffff;
+    background-color: $main-bg-color;
   }
 }
 
@@ -55,7 +55,7 @@
   @media screen and (min-width: 1024px) {
     padding: 50px 30px 40px 30px;
     width: 882px;
-    background: #ffffff;
+    background: $main-bg-color;
   }
 }
 .modal-img {
@@ -100,7 +100,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 23px;
-  color: #000000;
+  color: $text-color;
   margin-top: 30px;
   margin-bottom: 20px;
   text-align: left;
@@ -110,9 +110,8 @@
   }
 }
 
-.modal-title {
+.modal-movie-info {
   display: flex;
-  margin-top: 20px;
   text-align: left;
 }
 
@@ -142,7 +141,7 @@
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #000;
+  color: $text-color;
 
   p {
     display: -webkit-box;
@@ -165,12 +164,12 @@
     height: 17px;
     border-radius: 5px;
     text-align: center;
-    color: #ffffff;
-    background-color: #ff6b01;
+    color: $main-bg-color;
+    background-color: $accent-color;
 
     &.votes {
-      background-color: #f7f7f7;
-      color: #000;
+      background-color: $pagination-color;
+      color: $text-color;
       margin-left: 2px;
     }
   }
@@ -184,7 +183,7 @@
   font-size: 12px;
   line-height: 20px;
   text-align: left;
-  color: #000000;
+  color: $text-color;
 }
 
 .modal-about {
@@ -211,7 +210,7 @@
   .modal-button {
     background: transparent;
     text-decoration: none;
-    border: 1px solid #000;
+    border: 1px solid $text-color;
     outline: 5px;
     height: 44px;
     width: 113px;
@@ -222,7 +221,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-
+    cursor: pointer;
     @media screen and (min-width: 768px) {
       width: 125px;
     }
@@ -234,9 +233,9 @@
   }
 
   .modal-active-btn {
-    color: #fff;
-    background-color: #ff6b01;
-    border-color: #ff6b01;
+    color: $main-bg-color;
+    background-color: $accent-color;
+    border-color: $accent-color;
   }
 }
 
@@ -247,7 +246,7 @@
   height: 230px;
   max-width: 100%;
 
-  background-color: #ff6b01;
+  background-color: $accent-color;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -258,7 +257,7 @@
     .modal-logo-nav {
       margin-left: auto;
       display: flex;
-      color: #000;
+      color: $text-color;
     }
   }
 
@@ -286,7 +285,7 @@
   content: ' ';
   height: 14px;
   width: 2px;
-  background-color: #000;
+  background-color: $text-color;
 }
 .close-modal-window:before {
   transform: rotate(45deg);
