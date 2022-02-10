@@ -11,7 +11,7 @@ export function renderWatchedList() {
     document.querySelector('main').classList.add('empty');
   } else {
     document.querySelector('main').classList.remove('empty');
-    renderMarkup(data, queueContainerRef);
+    renderMarkup(data, watchedContainerRef);
   }
   goWatched();
   // } catch {
