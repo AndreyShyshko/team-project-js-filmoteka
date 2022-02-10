@@ -1,14 +1,15 @@
 const homeBtn = document.querySelector('#headerHomeBtn');
-const libraryBtn = document.querySelector('#headerLibraryBtn');
+export const libraryBtn = document.querySelector('#headerLibraryBtn');
 const library = document.querySelector('.library-container');
-const queue = document.querySelector('.queue');
-const queueBtn = document.querySelector('#btn__header-queue');
-const watched = document.querySelector('.watched');
-const watchedBtn = document.querySelector('#btn__header-watched');
+export const queue = document.querySelector('.queue');
+export const queueBtn = document.querySelector('#btn__header-queue');
+export const watched = document.querySelector('.watched');
+export const watchedBtn = document.querySelector('#btn__header-watched');
 const logoRef = document.querySelector('.header__logo');
-import { moviesGallery } from './main-trending-markup';
+import { moviesGallery, pagination } from './main-trending-markup';
 import { createPagination } from './pagination';
-import { renderQueueList } from './queue'
+import { renderQueueList } from './queue';
+import { showRating } from './show-rating';
 
 homeBtn.addEventListener('click', goHome);
 libraryBtn.addEventListener('click', goLibrary);
@@ -23,6 +24,7 @@ function goHome() {
   moviesGallery.classList.remove('isHide');
   watchedBtn.classList.remove('isActive');
   queueBtn.classList.remove('isActive');
+  pagination.classList.remove('isHide');
 
   const homeTotalPages = localStorage.getItem('home_total_pages');
   createPagination(+homeTotalPages);
@@ -33,10 +35,10 @@ function goLibrary() {
   moviesGallery.classList.add('isHide');
   queue.classList.remove('isHide');
   queueBtn.classList.add('isActive');
+  watchedBtn.classList.remove('isActive');
+  watched.classList.add('isHide');
 
   renderQueueList();
-
-  createPagination(10); // test quantity
 }
 
 export function goQueue() {
@@ -44,6 +46,8 @@ export function goQueue() {
   watchedBtn.classList.remove('isActive');
   queue.classList.remove('isHide');
   watched.classList.add('isHide');
+  const ratingsArray = document.querySelectorAll('.film-rating');
+  showRating(ratingsArray);
 }
 
 export function goWatched() {
@@ -51,4 +55,6 @@ export function goWatched() {
   queueBtn.classList.remove('isActive');
   queue.classList.add('isHide');
   watched.classList.remove('isHide');
+  const ratingsArray = document.querySelectorAll('.film-rating');
+  showRating(ratingsArray);
 }

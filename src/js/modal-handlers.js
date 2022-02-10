@@ -29,11 +29,13 @@ export function addToWatched(e) {
       watchedList.push(onModalFilm);
       e.currentTarget.classList.add('modal-active-btn');
       e.currentTarget.innerHTML = 'Remove from watched';
+      e.currentTarget.classList.add('isActive');
     } else {
       const index = watchedList.findIndex(film => film.id === +filmId);
       watchedList.splice(index, 1);
       e.currentTarget.classList.remove('modal-active-btn');
       e.currentTarget.innerHTML = 'Add to watched';
+      e.currentTarget.classList.remove('isActive');
     }
     localStorage.setItem('watched', JSON.stringify(watchedList));
 
@@ -58,11 +60,13 @@ export function addToQueue(e) {
       queueList.push(onModalFilm);
       e.currentTarget.classList.add('modal-active-btn');
       e.currentTarget.innerHTML = 'Remove from queue';
+      e.currentTarget.classList.add('isActive');
     } else {
       const index = queueList.findIndex(film => film.id === +filmId);
       queueList.splice(index, 1);
       e.currentTarget.classList.remove('modal-active-btn');
       e.currentTarget.innerHTML = 'Add to queue';
+      e.currentTarget.classList.remove('isActive');
     }
     localStorage.setItem('queue', JSON.stringify(queueList));
 
