@@ -1,16 +1,22 @@
 .header__up-btn {
   position: fixed;
   bottom: 112px;
-  right: 9px;
-  z-index: 1;
+  right: 2px;
+  z-index: 997;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    bottom: 200px;
+    right: 2px;
+
+    &:hover .icon-up {
+      animation: movieScale 450ms linear 55ms both;
+    }
+  }
 
   @media screen and (min-width: 1024px) {
     bottom: 114px;
     right: 28px;
-  }
-
-  &:hover .icon-up {
-    animation: movieScale 450ms linear 55ms both;
   }
 }
 
@@ -20,7 +26,19 @@
 
 .icon-up {
   position: relative;
+  width: 42px;
+  height: 42px;
+
+  @media screen and (min-width: 768px) {
   animation: movieScaleLoad 450ms linear 55ms both;
+  width: 45px;
+  height: 45px;
+  }
+
+  @media screen and (min-width: 1024px) {
+  width: 60px;
+  height: 60px;
+  }
 }
 
 .up-text {
